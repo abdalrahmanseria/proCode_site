@@ -8,17 +8,19 @@
         <div class="container relative">
             <div class="grid grid-cols-1 mt-12">
                 <h4
-                    class="text-white lg:text-5xl text-4xl lg:leading-normal leading-normal font-medium mb-3 md:mb-7 position-relative">
+                    class="text-white lg:text-5xl text-4xl lg:leading-normal leading-normal font-medium mb-7 position-relative">
                     {{ t('hero.title') }} <br>{{ t('hero.subtitle') }}
-                    <span class="hidden md:inline">
-                        <vue-typewriter-effect class="typewrite relative text-type-element inline" data-period="2000"
-                            :strings='["Contracting", "Maintenance", "Construction", "Solutions"]' />
-                    </span>
+                    <br class="md:hidden">
+                    <ClientOnly fallback-tag="span">
+                        <span class="inline-block min-w-[200px]">
+                            <vue-typewriter-effect 
+                                :key="currentLang"
+                                class="typewrite relative text-type-element inline" 
+                                data-period="2000"
+                                :strings='t("hero.typewriterWords")' />
+                        </span>
+                    </ClientOnly>
                 </h4>
-                <div class="text-white text-3xl md:hidden font-medium mb-6 min-h-[42px] flex items-center leading-relaxed">
-                    <vue-typewriter-effect class="typewrite relative text-type-element block" data-period="2000"
-                        :strings='["Contracting", "Maintenance", "Construction", "Solutions"]' />
-                </div>
 
                 <p class="text-white opacity-50 mb-0 max-w-2xl text-lg">{{ t('hero.description') }}</p>
 
@@ -55,7 +57,5 @@ import getintouch from '@/components/getInTouch.vue'
 import fooTer from '@/components/footer.vue';
 import { useLanguage } from '~/composables/useLanguage'
 
-const { t } = useLanguage()
+const { t, currentLang } = useLanguage()
 </script>
-
-<style lang="scss" scoped></style>

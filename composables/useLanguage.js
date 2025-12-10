@@ -21,7 +21,8 @@ const translations = {
     hero: {
       title: 'Welcome to ELSHARQUE',
       subtitle: 'Leading in MEP',
-      description: 'We are one of the most prominent and leading companies in the MEP contracting and maintenance sector. We have successfully delivered major projects across the Egyptian market.'
+      description: 'We are one of the most prominent and leading companies in the MEP contracting and maintenance sector. We have successfully delivered major projects across the Egyptian market.',
+      typewriterWords: ['Contracting', 'Maintenance', 'Construction', 'Solutions']
     },
     about: {
       whoWeAre: 'Who We Are ?',
@@ -221,7 +222,8 @@ const translations = {
     hero: {
       title: 'مرحباً بكم في الشرق',
       subtitle: 'الريادة في الميكانيكا والكهرباء',
-      description: 'نحن واحدة من أبرز الشركات الرائدة في قطاع المقاولات والصيانة للميكانيكا والكهرباء. لقد نجحنا في تنفيذ مشاريع كبرى في السوق المصري.'
+      description: 'نحن واحدة من أبرز الشركات الرائدة في قطاع المقاولات والصيانة للميكانيكا والكهرباء. لقد نجحنا في تنفيذ مشاريع كبرى في السوق المصري.',
+      typewriterWords: ['المقاولات', 'الصيانة', 'البناء', 'الحلول']
     },
     about: {
       whoWeAre: 'من نحن ؟',
