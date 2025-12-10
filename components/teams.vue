@@ -1,6 +1,6 @@
 <template>
     <!-- Start -->
-    <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="pricing">
+    <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="team">
         <div class="container">
             <div class="grid grid-cols-1 pb-8 text-center">
                 <h6 class="text-emerald-600 text-base font-medium uppercase mb-2">Our Team</h6>

@@ -12,7 +12,8 @@ const translations = {
       about: 'About us',
       services: 'Services',
       portfolio: 'Portfolio',
-      review: 'Review',
+      review: 'Clients',
+      team: 'Our Team',
       pricing: 'Pricing',
       blog: 'Blog',
       contact: 'Contact us'
@@ -198,6 +199,11 @@ const translations = {
     },
     footer: {
       copyright: 'ELSHARQUE FOR General Contracting and Maintenance. All rights reserved.'
+    },
+    clients: {
+      title: 'Our Clients',
+      subtitle: 'Trusted Partners',
+      description: 'We are proud to work with leading companies and organizations across various industries.'
     }
   },
   ar: {
@@ -206,7 +212,8 @@ const translations = {
       about: 'من نحن',
       services: 'الخدمات',
       portfolio: 'المشاريع',
-      review: 'التقييمات',
+      review: 'العملاء',
+      team: 'فريقنا',
       pricing: 'الأسعار',
       blog: 'المدونة',
       contact: 'اتصل بنا'
@@ -392,6 +399,11 @@ const translations = {
     },
     footer: {
       copyright: 'الشرق للمقاولات العامة والصيانة. جميع الحقوق محفوظة.'
+    },
+    clients: {
+      title: 'عملاؤنا',
+      subtitle: 'شركاؤنا الموثوقون',
+      description: 'نفتخر بالعمل مع الشركات والمنظمات الرائدة في مختلف الصناعات.'
     }
   }
 }

@@ -50,11 +50,11 @@
                         <li class="nav-item portfolio">
                             <a class="nav-link" href="#portfolio">{{ t('nav.portfolio') }}</a>
                         </li>
-                        <li class="nav-item testi">
-                            <a class="nav-link" href="#testi">{{ t('nav.review') }}</a>
+                        <li class="nav-item clients">
+                            <a class="nav-link" href="#clients">{{ t('nav.review') }}</a>
                         </li>
-                        <li class="nav-item pricing">
-                            <a class="nav-link" href="#pricing">{{ t('nav.pricing') }}</a>
+                        <li class="nav-item team">
+                            <a class="nav-link" href="#team">{{ t('nav.team') }}</a>
                         </li>
                         <li class="nav-item blog">
                             <a class="nav-link" href="#blog">{{ t('nav.blog') }}</a>

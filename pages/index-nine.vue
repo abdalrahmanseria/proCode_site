@@ -65,7 +65,6 @@
     <services />
     <portfolio />
     <client />
-    <pricing />
     <team />
     <blog />
     <getintouch />
@@ -78,7 +77,6 @@ import about from '@/components/about.vue';
 import services from '@/components/services.vue';
 import portfolio from '@/components/portfolio/portfolio.vue';
 import client from '@/components/client.vue';
-import pricing from '@/components/pricing.vue';
 import team from '@/components/teams.vue';
 import blog from '@/components/blog/blog.vue';
 import getintouch from '@/components/getInTouch.vue'
@@ -95,7 +93,6 @@ export default {
         services,
         portfolio,
         client,
-        pricing,
         team,
         blog,
         getintouch,
