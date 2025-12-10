@@ -71,3 +71,22 @@ onMounted(() => {
   }, 100)
 })
 </script>
+
+<style scoped>
+/* Fix Arabic text rendering in typewriter */
+.typewrite {
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Ensure Arabic characters connect properly */
+.typewrite,
+.typewrite * {
+  unicode-bidi: normal;
+  direction: inherit;
+  font-variant-ligatures: normal;
+  font-kerning: normal;
+}
+</style>
