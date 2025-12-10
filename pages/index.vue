@@ -12,12 +12,15 @@
                     {{ t('hero.title') }} <br>{{ t('hero.subtitle') }}
                     <br class="md:hidden">
                     <ClientOnly fallback-tag="span">
-                        <span class="inline-block min-w-[200px]">
+                        <span v-if="typewriterReady" class="inline-block min-w-[200px]">
                             <vue-typewriter-effect 
-                                :key="currentLang"
+                                :key="`typewriter-${currentLang}`"
                                 class="typewrite relative text-type-element inline" 
                                 data-period="2000"
                                 :strings='t("hero.typewriterWords")' />
+                        </span>
+                        <span v-else class="inline-block min-w-[200px]">
+                            {{ t("hero.typewriterWords")[0] }}
                         </span>
                     </ClientOnly>
                 </h4>
@@ -45,6 +48,7 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
 import navBar from '@/components/navbar/navbar-light.vue';
 import VueTypewriterEffect from "vue-typewriter-effect";
 import about from '@/components/about.vue';
@@ -58,4 +62,12 @@ import fooTer from '@/components/footer.vue';
 import { useLanguage } from '~/composables/useLanguage'
 
 const { t, currentLang } = useLanguage()
+const typewriterReady = ref(false)
+
+onMounted(() => {
+  // Small delay to ensure DOM is ready
+  setTimeout(() => {
+    typewriterReady.value = true
+  }, 100)
+})
 </script>
