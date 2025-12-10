@@ -11,8 +11,8 @@
                     class="text-white lg:text-5xl text-4xl lg:leading-normal leading-normal font-medium mb-7 position-relative">
                     {{ t('hero.title') }} <br>{{ t('hero.subtitle') }}
                     <br class="md:hidden">
-                    <span class="inline-block min-w-[200px]">
-                        <span class="typewriter-text">{{ displayText }}</span>
+                    <span class="inline-block min-w-[200px] typewriter-wrapper">
+                        <span class="typewriter-text text-type-element">{{ displayText }}</span>
                         <span class="typewriter-cursor">|</span>
                     </span>
                 </h4>
@@ -40,7 +40,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watch, onBeforeUnmount } from 'vue'
 import navBar from '@/components/navbar/navbar-light.vue';
 import about from '@/components/about.vue';
 import services from '@/components/services.vue';
@@ -57,12 +57,24 @@ const displayText = ref('')
 let currentIndex = 0
 let currentWordIndex = 0
 let isDeleting = false
-let typewriterInterval = null
+let typewriterTimeout = null
+
+const stopTypewriter = () => {
+  if (typewriterTimeout) {
+    clearTimeout(typewriterTimeout)
+    typewriterTimeout = null
+  }
+}
 
 const startTypewriter = () => {
-  if (typewriterInterval) {
-    clearInterval(typewriterInterval)
-  }
+  // إيقاف أي typewriter effect قديم
+  stopTypewriter()
+  
+  // إعادة تعيين المتغيرات
+  currentIndex = 0
+  currentWordIndex = 0
+  isDeleting = false
+  displayText.value = ''
   
   const words = t("hero.typewriterWords")
   
@@ -76,7 +88,7 @@ const startTypewriter = () => {
       if (currentIndex === 0) {
         isDeleting = false
         currentWordIndex = (currentWordIndex + 1) % words.length
-        setTimeout(type, 500)
+        typewriterTimeout = setTimeout(type, 500)
         return
       }
     } else {
@@ -85,15 +97,15 @@ const startTypewriter = () => {
       
       if (currentIndex === currentWord.length) {
         isDeleting = true
-        setTimeout(type, 2000)
+        typewriterTimeout = setTimeout(type, 2000)
         return
       }
     }
     
-    setTimeout(type, isDeleting ? 50 : 100)
+    typewriterTimeout = setTimeout(type, isDeleting ? 50 : 100)
   }
   
-  type()
+  typewriterTimeout = setTimeout(type, 300)
 }
 
 onMounted(() => {
@@ -105,21 +117,38 @@ onMounted(() => {
 })
 
 watch(currentLang, () => {
-  currentIndex = 0
-  currentWordIndex = 0
-  isDeleting = false
-  displayText.value = ''
   startTypewriter()
+})
+
+onBeforeUnmount(() => {
+  stopTypewriter()
 })
 </script>
 
 <style scoped>
 /* Custom typewriter effect */
+.typewriter-wrapper {
+  position: relative;
+}
+
 .typewriter-text {
   display: inline-block;
   font-feature-settings: 'liga' 1, 'calt' 1;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  position: relative;
+}
+
+/* Yellow underline effect */
+.typewriter-text::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
+  border-radius: 2px;
 }
 
 .typewriter-cursor {
