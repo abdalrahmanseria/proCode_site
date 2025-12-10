@@ -41,7 +41,7 @@ const translations = {
         closing: 'Warm regards,',
         ceoName: 'Dr. Eng. Ahmed Khaled',
         ceoTitle: 'CEO',
-        ceoSubtitle: 'Lecturer at Faculty of Engineering, Menofia '
+        ceoSubtitle: 'Lecturer at Faculty of Engineering, '
       }
     },
     services: {
