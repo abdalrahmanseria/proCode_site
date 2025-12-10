@@ -11,18 +11,10 @@
                     class="text-white lg:text-5xl text-4xl lg:leading-normal leading-normal font-medium mb-7 position-relative">
                     {{ t('hero.title') }} <br>{{ t('hero.subtitle') }}
                     <br class="md:hidden">
-                    <ClientOnly fallback-tag="span">
-                        <span v-if="typewriterReady" class="inline-block min-w-[200px]">
-                            <vue-typewriter-effect 
-                                :key="`typewriter-${currentLang}`"
-                                class="typewrite relative text-type-element inline" 
-                                data-period="2000"
-                                :strings='t("hero.typewriterWords")' />
-                        </span>
-                        <span v-else class="inline-block min-w-[200px]">
-                            {{ t("hero.typewriterWords")[0] }}
-                        </span>
-                    </ClientOnly>
+                    <span class="inline-block min-w-[200px]">
+                        <span class="typewriter-text">{{ displayText }}</span>
+                        <span class="typewriter-cursor">|</span>
+                    </span>
                 </h4>
 
                 <p class="text-white opacity-50 mb-0 max-w-2xl text-lg">{{ t('hero.description') }}</p>
@@ -48,9 +40,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import navBar from '@/components/navbar/navbar-light.vue';
-import VueTypewriterEffect from "vue-typewriter-effect";
 import about from '@/components/about.vue';
 import services from '@/components/services.vue';
 import portfolio from '@/components/portfolio/portfolio.vue';
@@ -62,31 +53,84 @@ import fooTer from '@/components/footer.vue';
 import { useLanguage } from '~/composables/useLanguage'
 
 const { t, currentLang } = useLanguage()
-const typewriterReady = ref(false)
+const displayText = ref('')
+let currentIndex = 0
+let currentWordIndex = 0
+let isDeleting = false
+let typewriterInterval = null
+
+const startTypewriter = () => {
+  if (typewriterInterval) {
+    clearInterval(typewriterInterval)
+  }
+  
+  const words = t("hero.typewriterWords")
+  
+  const type = () => {
+    const currentWord = words[currentWordIndex]
+    
+    if (isDeleting) {
+      displayText.value = currentWord.substring(0, currentIndex - 1)
+      currentIndex--
+      
+      if (currentIndex === 0) {
+        isDeleting = false
+        currentWordIndex = (currentWordIndex + 1) % words.length
+        setTimeout(type, 500)
+        return
+      }
+    } else {
+      displayText.value = currentWord.substring(0, currentIndex + 1)
+      currentIndex++
+      
+      if (currentIndex === currentWord.length) {
+        isDeleting = true
+        setTimeout(type, 2000)
+        return
+      }
+    }
+    
+    setTimeout(type, isDeleting ? 50 : 100)
+  }
+  
+  type()
+}
 
 onMounted(() => {
-  // Small delay to ensure DOM is ready
-  setTimeout(() => {
-    typewriterReady.value = true
-  }, 100)
+  if (process.client) {
+    setTimeout(() => {
+      startTypewriter()
+    }, 500)
+  }
+})
+
+watch(currentLang, () => {
+  currentIndex = 0
+  currentWordIndex = 0
+  isDeleting = false
+  displayText.value = ''
+  startTypewriter()
 })
 </script>
 
 <style scoped>
-/* Fix Arabic text rendering in typewriter */
-.typewrite {
+/* Custom typewriter effect */
+.typewriter-text {
+  display: inline-block;
   font-feature-settings: 'liga' 1, 'calt' 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-/* Ensure Arabic characters connect properly */
-.typewrite,
-.typewrite * {
-  unicode-bidi: normal;
-  direction: inherit;
-  font-variant-ligatures: normal;
-  font-kerning: normal;
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+  font-weight: normal;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }
 </style>
