@@ -41,7 +41,7 @@ const translations = {
         closing: 'Warm regards,',
         ceoName: 'Dr. Eng. Ahmed Khaled',
         ceoTitle: 'CEO',
-        ceoSubtitle: 'Lecturer at Faculty of Engineering, '
+        ceoSubtitle: 'Lecturer at Faculty of Engineering, Menofia University'
       }
     },
     services: {
@@ -233,7 +233,7 @@ const translations = {
         paragraph4: 'نحن نعتز بعلاقاتنا مع العملاء والشركاء وأصحاب المصلحة، ملتزمون برعاية هذه الروابط لسنوات قادمة. دعمكم يلهمنا لرفع المعايير إلى مستوى أعلى.',
         paragraph5: 'شكراً لكم على دعمكم المستمر وثقتكم في شركة الشرق. معاً، دعونا نواصل بناء مستقبل مدعوم بالابتكار والموثوقية والتميز.',
         closing: 'مع أطيب التحيات،',
-        ceoName: 'د. م. أحمد خالد',
+        ceoName: 'م.د / أحمد خالد',
         ceoTitle: 'رئيس مجلس الإدارة',
         ceoSubtitle: 'مدرس بكلية الهندسة، جامعة المنوفية'
       }
