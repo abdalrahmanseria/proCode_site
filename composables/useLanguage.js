@@ -39,9 +39,9 @@ const translations = {
         paragraph4: 'We cherish our relationships with clients, partners, and stakeholders, committed to nurturing these connections for years to come. Your support inspires us to raise the bar even higher.',
         paragraph5: 'Thank you for your continued support and trust in EL-SHARQUE COMPANY. Together, let us continue to build a future that is powered by innovation, reliability, and excellence.',
         closing: 'Warm regards,',
-        ceoName: 'Dr. ٍSara Eldaly ',
+        ceoName: 'Dr. Eng. Ahmed Khaled',
         ceoTitle: 'CEO',
-        ceoSubtitle: 'Lecturer at Cairo University faculty of medicine'
+        ceoSubtitle: 'Lecturer at Faculty of Engineering, Menofia University'
       }
     },
     services: {

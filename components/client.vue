@@ -89,7 +89,7 @@ export default {
                 {
                     image: client,
                     desc: ' " It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. "',
-                    name: 'Thomas Israel',
+                    name: 'Thomas ',
                     position: 'Staff Engineer, Algolia'
                 },
                 {

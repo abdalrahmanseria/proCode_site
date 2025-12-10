@@ -3,9 +3,11 @@
     <section
         class="py-36 lg:py-64 w-full table relative bg-[url('../../assets/images/bg/video.jpg')] bg-center bg-cover"
         id="home">
+        <!-- Video placeholder - will be replaced later -->
         <div class="bg-video-wrapper">
-            <iframe
-                src="https://player.vimeo.com/video/818944000?background=1&autoplay=1&loop=1&byline=0&title=0"></iframe>
+            <!-- Video removed - placeholder for future video -->
+            <!-- <iframe
+                src="https://player.vimeo.com/video/818944000?background=1&autoplay=1&loop=1&byline=0&title=0"></iframe> -->
             <!--Note: Vimeo Embed Background Video-->
 
             <!-- <iframe src="https://www.youtube.com/embed/S_CGed6E610?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1"></iframe> -->

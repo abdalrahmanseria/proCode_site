@@ -6,10 +6,9 @@
                     <div class="lg:col-span-5">
                         <div class="relative">
                             <img src="assets/images/about.jpg" class="rounded-lg shadow-lg relative" alt="">
+                            <!-- Video placeholder - will be replaced later -->
                             <div class="absolute bottom-2/4 translate-y-2/4 start-0 end-0 text-center">
-                                <a  @click="toggle" data-type="youtube" data-id="S_CGed6E610" class="cursor-pointer lightbox size-20 rounded-full shadow-lg shadow-slate-100 dark:shadow-slate-800 inline-flex items-center justify-center bg-white dark:bg-slate-900 text-emerald-600">
-                                    <i class="mdi mdi-play inline-flex items-center justify-center text-2xl"></i>
-                                </a>
+                                <!-- Video button removed - placeholder for future video -->
                             </div>
                         </div>
                     </div><!--end col-->
@@ -61,26 +60,26 @@
             </div><!--end container-->
         </section><!--end section-->
         <!-- End -->
-        <div :class="isActive ? 'fixed' : 'hidden' " class="bg-black/[0.9] top-0 left-0 bottom-0 w-[100%] h-[100%] z-999">
+        <!-- Video modal placeholder - will be replaced later -->
+        <!-- <div :class="isActive ? 'fixed' : 'hidden' " class="bg-black/[0.9] top-0 left-0 bottom-0 w-[100%] h-[100%] z-999">
                 <div class="h-[100%] flex items-center justify-center">
                     <div class="relative inline-block">
-                        <iframe src="https://www.youtube.com/embed/S_CGed6E610" width="700" height="500" frameborder="0"></iframe>
+                        <iframe src="" width="700" height="500" frameborder="0"></iframe>
                         <a class="mdi mdi-close text-white absolute top-1 right-1 text-xl cursor-pointer" @click="toggle"></a>
                     </div>
                 </div>
-          </div>
+          </div> -->
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
 
 const { t } = useLanguage()
-const isActive = ref(false)
-
-const toggle = () => {
-    isActive.value = !isActive.value
-}
+// Video-related code removed - will be restored when new video is added
+// const isActive = ref(false)
+// const toggle = () => {
+//     isActive.value = !isActive.value
+// }
 </script>
 
 <style lang="scss" scoped>
