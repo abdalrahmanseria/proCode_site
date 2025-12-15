@@ -2,23 +2,21 @@
     <nav class="navbar" id="navbar" @scroll="handleScroll">
             <div class="container flex flex-wrap items-center justify-end">
                 <NuxtLink class="navbar-brand flex items-center" to="/">
-                    <img src="assets/images/logo (2).png" class="h-20 dark:hidden" alt="ELSHARQUE">
-                    <img src="assets/images/logo (2).png" class="h-20 hidden dark:inline-block" alt="ELSHARQUE">
+                    <img src="assets/images/logo (2).png" class="h-24 md:h-28 dark:hidden" alt="ELSHARQUE">
+                    <img src="assets/images/logo (2).png" class="h-24 md:h-28 hidden dark:inline-block" alt="ELSHARQUE">
                 </NuxtLink>
 
                 <div class="nav-icons flex items-center lg_992:order-2 ms-auto">
                     <!-- Navbar Button -->
                     <ul class="list-none menu-social mb-0">
                         <li class="inline">
-                            <a href="" class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i class="uil uil-github"></i></a>
+                            <a href="#" target="_blank" class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i class="uil uil-facebook-f"></i></a>
                         </li>
                         <li class="inline">
-                            <a href="" class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i class="uil uil-twitter"></i></a>
+                            <a :href="`https://wa.me/${whatsappNumber}`" target="_blank" class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i class="uil uil-whatsapp"></i></a>
                         </li>
                         <li class="inline">
-                            <a href="">
-                                <a href="" class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i class="uil uil-instagram"></i></a>
-                            </a>
+                            <a href="#" target="_blank" class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i class="uil uil-linkedin"></i></a>
                         </li>
                     </ul>
                     <!-- Navbar Collapse Manu Button -->
@@ -46,15 +44,17 @@
                         <li class="nav-item clients">
                             <a class="nav-link" href="#clients">{{ t('nav.review') }}</a>
                         </li>
-                        <li class="nav-item team">
-                            <a class="nav-link" href="#team">{{ t('nav.team') }}</a>
-                        </li>
                         <li class="nav-item blog">
                             <a class="nav-link" href="#blog">{{ t('nav.blog') }}</a>
                         </li>
                         <li class="nav-item contact">
                             <a class="nav-link" href="#contact">{{ t('nav.contact') }}</a>
-                        </li>                       
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" @click.prevent="toggleLanguage" class="nav-link cursor-pointer">
+                                {{ languageButtonText }}
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -66,12 +66,17 @@
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
 
-const { t } = useLanguage()
+const { t, currentLang, isRTL, toggleLanguage } = useLanguage()
 const toggle = ref(false)
 const sections = ref([])
 const navLi = ref([])
 const current = ref("")
 const sectionTop = ref(null)
+const whatsappNumber = '201003923040'
+
+const languageButtonText = computed(() => {
+    return isRTL.value ? 'English' : 'عربي'
+})
 
 onMounted(() => {
     if (process.client) {

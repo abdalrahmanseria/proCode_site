@@ -8,10 +8,10 @@ let isInitialized = false
 const translations = {
   en: {
     nav: {
-      home: 'Home',
+      home: 'Company',
       about: 'About us',
       services: 'Services',
-      portfolio: 'Portfolio',
+      portfolio: 'Projects',
       review: 'Clients',
       team: 'Our Team',
       pricing: 'Pricing',
@@ -196,7 +196,8 @@ const translations = {
       description: 'Get in touch with Elsharque. We\'re here to help you with your projects and answer any questions you may have.',
       phone: 'Phone',
       email: 'Email',
-      location: 'Location'
+      location: 'Location',
+      whatsapp: 'Chat on WhatsApp'
     },
     footer: {
       copyright: 'ELSHARQUE FOR General Contracting and Maintenance. All rights reserved.'
@@ -209,7 +210,7 @@ const translations = {
   },
   ar: {
     nav: {
-      home: 'الرئيسية',
+      home: 'الشركة',
       about: 'من نحن',
       services: 'الخدمات',
       portfolio: 'المشاريع',
@@ -397,7 +398,8 @@ const translations = {
       description: 'تواصل مع الشرق. نحن هنا لمساعدتك في مشاريعك والإجابة على أي أسئلة قد تكون لديك.',
       phone: 'الهاتف',
       email: 'البريد الإلكتروني',
-      location: 'الموقع'
+      location: 'الموقع',
+      whatsapp: 'تواصل عبر واتساب'
     },
     footer: {
       copyright: 'الشرق للمقاولات العامة والصيانة. جميع الحقوق محفوظة.'

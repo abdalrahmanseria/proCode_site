@@ -15,42 +15,15 @@
             </span>
         </div>
         <!-- Switcher -->
-
-        <!-- LTR & RTL Mode Code -->
-        <div class="fixed top-1/3 -right-2 z-50" dir="ltr">
-            <a href="javascript:void(0)" id="switchRtl" @click.prevent="handleToggleLanguage">
-                <span class="py-0.5 px-2 text-xs relative inline-block rounded-t-md -rotate-90 bg-white dark:bg-slate-900 shadow-md dark:shadow dark:shadow-gray-800 font-normal" :class="isRTL ? 'block' : 'hidden'">{{ languageButtonText }}</span>
-                <span class="py-0.5 px-2 text-xs relative inline-block rounded-t-md -rotate-90 bg-white dark:bg-slate-900 shadow-md dark:shadow dark:shadow-gray-800 font-normal" :class="isRTL ? 'hidden' : 'block'">{{ languageButtonText }}</span>
-            </a>
-        </div>
     </div>
 </template>
 
 <script setup>
 import feather from 'feather-icons'
-import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
-import { useLanguage } from '~/composables/useLanguage'
+import { onMounted, onUnmounted, ref } from 'vue'
 
-const { currentLang, isRTL, toggleLanguage } = useLanguage()
 const showTopButton = ref(false)
 const htmlTag = ref(null)
-
-const languageButtonText = computed(() => {
-    return isRTL.value ? 'English' : 'عربي'
-})
-
-const handleToggleLanguage = () => {
-    console.log('Button clicked, current language:', currentLang.value)
-    toggleLanguage()
-    console.log('After toggle, new language:', currentLang.value)
-}
-
-// Watch for language changes to ensure reactivity
-watch(currentLang, (newLang) => {
-    if (process.client) {
-        console.log('Language changed to:', newLang)
-    }
-}, { immediate: true })
 
 const handleScroll = () => {
     if (process.client) {

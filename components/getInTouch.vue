@@ -45,7 +45,11 @@
     
                                 <div class="flex-1 ms-6">
                                     <h5 class="text-lg dark:text-white mb-2 font-medium">{{ t('contact.phone') }}</h5>
-                                    <a href="tel:+201094892311" class="text-slate-400">+2 01094892311</a>
+                                    <a href="tel:+201094892311" class="text-slate-400 block mb-2">+2 01094892311</a>
+                                    <a :href="`https://wa.me/${whatsappNumber}`" target="_blank" class="inline-flex items-center text-emerald-600 hover:text-emerald-700">
+                                        <i class="uil uil-whatsapp text-xl me-1"></i>
+                                        <span>{{ t('contact.whatsapp') }}</span>
+                                    </a>
                                 </div>
                             </div>
     
@@ -84,6 +88,7 @@ import { ref } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
 
 const { t } = useLanguage()
+const whatsappNumber = '201003923040'
 
 const formData = ref({
     name: '',
@@ -108,11 +113,8 @@ ${formData.value.message}
     // ترميز الرسالة للـ URL
     const encodedMessage = encodeURIComponent(message)
     
-    // رقم WhatsApp (بدون + أو مسافات)
-    const phoneNumber = '01003923040'
-    
     // رابط WhatsApp
-    const whatsappUrl = `https://wa.me/2${phoneNumber}?text=${encodedMessage}`
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
     
     // فتح WhatsApp
     window.open(whatsappUrl, '_blank')
