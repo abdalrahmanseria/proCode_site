@@ -56,7 +56,6 @@ export default {
         services,
         porTfolio,
         client,
-        team,
         blog,
         getintouch,
         fooTer,
