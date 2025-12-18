@@ -47,30 +47,31 @@
     <!-- End -->
     <vue-easy-lightbox :visible="visibleRef" :imgs="imgsRef" :index="indexRef" @hide="onHide"></vue-easy-lightbox>
     <!-- Start -->
- <section id="portfolio" class="py-24 w-full table relative bg-[url('../../assets/images/bg/cta.png')] bg-center bg-cover">
-            <div class="absolute inset-0 bg-black opacity-80"></div>
-            <div class="container relative">
-                <div class="grid grid-cols-1 pb-8 text-center">
-                    <h3 class="mb-6 md:text-3xl text-2xl text-white font-medium">{{ t('portfolio.readyToStart') }}</h3>
+    <section id="portfolio-cta" class="py-24 w-full table relative bg-center bg-cover hero-cta">
+        <div class="absolute inset-0 bg-black opacity-80"></div>
+        <div class="container relative">
+            <div class="grid grid-cols-1 pb-8 text-center">
+                <h3 class="mb-6 md:text-3xl text-2xl text-white font-medium">{{ t('portfolio.readyToStart') }}</h3>
 
-                    <p class="text-white opacity-50 max-w-xl mx-auto">{{ t('portfolio.contactToday') }}</p>
-                
-                    <div class="relative mt-10">
-                        <a href="#contact" class="btn bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white rounded-md">{{ t('buttons.getStarted') }} !</a>
-                    </div>
-                </div><!--end grid-->
-            </div><!--end container-->
-        </section><!--end section-->
-        <!-- End -->
+                <p class="text-white opacity-50 max-w-xl mx-auto">{{ t('portfolio.contactToday') }}</p>
+            
+                <div class="relative mt-10">
+                    <a href="#contact" class="btn bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white rounded-md">{{ t('buttons.getStarted') }} !</a>
+                </div>
+            </div><!--end grid-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- End -->
 </template>
 
 <script>
-import mostakbalMasrImg from 'assets/images/mostakbal masr/Screenshot 2025-12-09 155820.png';
-import monorailGarageImg from 'assets/images/monorail/Screenshot 2025-12-09 161651.png';
-import administration90thImg from 'assets/images/90th/Screenshot 2025-12-09 162536.png';
-import newAdminCapitalImg from 'assets/images/capitalnew/Screenshot 2025-12-09 163033.png';
-import newDamiettaImg from 'assets/images/damietta/Screenshot 2025-12-09 164002.png';
-import newAdminCapitalPumpsImg from 'assets/images/New Administrative/Screenshot 2025-12-09 164250.png';
+import mostakbalMasrImg from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 155820.png';
+import monorailGarageImg from '@/assets/images/monorail/Screenshot 2025-12-09 161651.png';
+import administration90thImg from '@/assets/images/90th/Screenshot 2025-12-09 162536.png';
+import newAdminCapitalImg from '@/assets/images/capitalnew/Screenshot 2025-12-09 163033.png';
+import newDamiettaImg from '@/assets/images/damietta/Screenshot 2025-12-09 164002.png';
+import newAdminCapitalPumpsImg from '@/assets/images/New Administrative/Screenshot 2025-12-09 164250.png';
+import ctaImg from '@/assets/images/bg/cta.png';
 import VueEasyLightbox from 'vue-easy-lightbox';
 import { ref, computed } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
@@ -153,10 +154,15 @@ export default {
             imgsRef,
             showMultiple,
             onHide,
-            navigateToProject
+            navigateToProject,
+            ctaImg
         }
     }
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.hero-cta {
+    background-image: v-bind('`url(${ctaImg})`');
+}
+</style>

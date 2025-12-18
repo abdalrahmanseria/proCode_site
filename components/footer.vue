@@ -5,7 +5,7 @@
                 <div class="grid md:grid-cols-12 items-center">
                     <div class="md:col-span-3">
                         <a href="#" class="logo-footer flex items-center justify-center md:justify-start">
-                            <img src="assets/images/logo (2).png" class="h-24 md:h-28" alt="ELSHARQUE">
+                            <img :src="logoImg" class="h-24 md:h-28" alt="ELSHARQUE">
                         </a>
                     </div>
 
@@ -33,6 +33,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
+import logoImg from '@/assets/images/logo (2).png'
 
 const { t } = useLanguage()
 const date = computed(() => new Date().getFullYear())

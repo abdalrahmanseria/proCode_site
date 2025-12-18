@@ -1,8 +1,8 @@
 <template>
-  <navBar />
-     <!-- Hero Start -->
-     <section class="py-28 w-full table relative bg-[url('../../assets/images/bg/auth.jpg')] bg-top bg-no-repeat">
-            <div class="absolute inset-0 bg-slate-950/80"></div>
+ <navBar />
+    <!-- Hero Start -->
+    <section class="py-28 w-full table relative bg-top bg-no-repeat hero-auth">
+           <div class="absolute inset-0 bg-slate-950/80"></div>
 
             <div class="container">
                 <div class="grid grid-cols-1 pb-8 text-center mt-10">
@@ -26,6 +26,7 @@
 import navBar from '@/components/navbar/navbar-light.vue';
 import portfoliodetail from '@/components/portfolio/portfolio-detail.vue';
 import fooTer from '@/components/footer.vue'
+import authImg from '@/assets/images/bg/auth.jpg'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useLanguage } from '~/composables/useLanguage'
@@ -93,12 +94,16 @@ export default {
         return {
             t,
             projectName,
-            projectLocation
+            projectLocation,
+            authImg
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-
+.hero-auth {
+    background-image: v-bind('`url(${authImg})`');
+    background-size: cover;
+}
 </style>

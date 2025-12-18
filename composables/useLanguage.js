@@ -15,8 +15,23 @@ const translations = {
       review: 'Clients',
       team: 'Our Team',
       pricing: 'Pricing',
-      blog: 'Blog',
-      contact: 'Contact us'
+      blog: 'Last Updates',
+      contact: 'Contact us',
+      suppliers: 'Suppliers',
+      companyMenu: {
+        overview: 'Overview',
+        mission: 'Mission',
+        vision: 'Vision',
+        chairmanWord: 'Chairman Word'
+      },
+      servicesMenu: {
+        electrical: 'Electrical Systems',
+        mechanical: 'Mechanical Systems',
+        building: 'Building Construction',
+        infrastructure: 'Infrastructure & Landscaping',
+        mepDesign: 'MEP Design & BOQ',
+        bim: 'BIM 3D Modeling'
+      }
     },
     hero: {
       title: 'Welcome to ELSHARQUE',
@@ -206,6 +221,19 @@ const translations = {
       title: 'Our Clients',
       subtitle: 'Trusted Partners',
       description: 'We are proud to work with leading companies and organizations across various industries.'
+    },
+    suppliersForm: {
+      title: 'Supplier Registration',
+      subtitle: 'Join our network of trusted suppliers',
+      description: 'Fill out the form below to register your company as a potential supplier for ELSHARQUE.',
+      companyName: 'Company Name',
+      commercialRegister: 'Commercial Register Number',
+      employeeName: 'Responsible Employee Name',
+      jobTitle: 'Job Title',
+      phone: 'Mobile Number',
+      products: 'Products or Services',
+      submit: 'Send Application',
+      invalidPhone: 'Please enter a valid Egyptian phone number (e.g., 01012345678)'
     }
   },
   ar: {
@@ -217,8 +245,23 @@ const translations = {
       review: 'العملاء',
       team: 'فريقنا',
       pricing: 'الأسعار',
-      blog: 'المدونة',
-      contact: 'اتصل بنا'
+      blog: 'آخر التحديثات',
+      contact: 'اتصل بنا',
+      suppliers: 'الموردين',
+      companyMenu: {
+        overview: 'نظرة عامة',
+        mission: 'المهمة',
+        vision: 'الرؤية',
+        chairmanWord: 'كلمة رئيس مجلس الإدارة'
+      },
+      servicesMenu: {
+        electrical: 'الأنظمة الكهربائية',
+        mechanical: 'الأنظمة الميكانيكية',
+        building: 'البناء والتشطيبات',
+        infrastructure: 'البنية التحتية والمناظر الطبيعية',
+        mepDesign: 'تصميم MEP وجداول الكميات',
+        bim: 'نمذجة BIM ثلاثية الأبعاد'
+      }
     },
     hero: {
       title: 'مرحباً بكم في الشرق',
@@ -408,6 +451,19 @@ const translations = {
       title: 'عملاؤنا',
       subtitle: 'شركاؤنا الموثوقون',
       description: 'نفتخر بالعمل مع الشركات والمنظمات الرائدة في مختلف الصناعات.'
+    },
+    suppliersForm: {
+      title: 'تسجيل الموردين',
+      subtitle: 'انضم إلى شبكة موردينا المعتمدين',
+      description: 'يرجى ملء النموذج أدناه لتسجيل شركتكم كمورد محتمل لشركة الشرق.',
+      companyName: 'اسم الشركة',
+      commercialRegister: 'رقم السجل التجارى',
+      employeeName: 'اسم الموظف المسئول',
+      jobTitle: 'الوظيفة',
+      phone: 'رقم الموبايل',
+      products: 'المنتجات او الخدمات',
+      submit: 'إرسال الطلب',
+      invalidPhone: 'يرجى إدخال رقم موبايل مصري صحيح (مثال: 01012345678)'
     }
   }
 }

@@ -5,7 +5,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
                     <div class="lg:col-span-5">
                         <div class="relative">
-                            <img src="assets/images/about.jpg" class="rounded-lg shadow-lg relative" alt="">
+                            <img :src="aboutImg" class="rounded-lg shadow-lg relative" alt="">
                             <!-- Video placeholder - will be replaced later -->
                             <div class="absolute bottom-2/4 translate-y-2/4 start-0 end-0 text-center">
                                 <!-- Video button removed - placeholder for future video -->
@@ -15,17 +15,19 @@
 
                     <div class="lg:col-span-7">
                         <div class="lg:ms-7">
+                            <div id="about">
                             <h6 class="text-emerald-600 text-base font-medium uppercase mb-2">{{ t('about.whoWeAre') }}</h6>
                             <h3 class="mb-4 md:text-2xl text-xl font-medium dark:text-white">{{ t('about.title') }}</h3>
 
                             <p class="text-slate-400 dark:text-slate-300 max-w-2xl mx-auto">{{ t('about.description') }}</p>
+                            </div>
                             
-                            <div class="mt-6">
+                            <div class="mt-6 section-target" id="about-vision">
                                 <h6 class="text-emerald-600 text-base font-medium uppercase mb-2">{{ t('about.visionTitle') }}</h6>
                                 <p class="text-slate-400 dark:text-slate-300 max-w-2xl mx-auto">{{ t('about.vision') }}</p>
                             </div>
                             
-                            <div class="mt-6">
+                            <div class="mt-6 section-target" id="about-mission">
                                 <h6 class="text-emerald-600 text-base font-medium uppercase mb-2">{{ t('about.missionTitle') }}</h6>
                                 <p class="text-slate-400 dark:text-slate-300 max-w-2xl mx-auto">{{ t('about.mission') }}</p>
                             </div>
@@ -38,7 +40,7 @@
                 </div><!--end grid-->
                 
                 <!-- Chairman Word Section -->
-                <div class="grid grid-cols-1 mt-16">
+                <div class="grid grid-cols-1 mt-16 section-target" id="about-chairman">
                     <div class="text-center mb-8">
                         <h6 class="text-emerald-600 text-base font-medium uppercase mb-2">{{ t('about.chairmanWord.title') }}</h6>
                     </div>
@@ -73,6 +75,7 @@
 
 <script setup>
 import { useLanguage } from '~/composables/useLanguage'
+import aboutImg from '@/assets/images/about.jpg'
 
 const { t } = useLanguage()
 // Video-related code removed - will be restored when new video is added

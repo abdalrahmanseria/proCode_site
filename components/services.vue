@@ -15,14 +15,14 @@
             </div><!--end grid-->
 
             <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6">
-                <div v-for="data in datas" :key="data" :class="data.class">
+                <div v-for="data in datas" :key="data.id" :class="data.class">
                     <div
                         class="size-20 bg-emerald-600/5 text-emerald-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
                         <i :class="data.icon"></i>
                     </div>
 
                     <div class="content mt-7">
-                        <a href=""
+                        <a href="javascript:void(0)" @click="openServiceDialog(data.id)"
                             class="text-lg hover:text-emerald-600 dark:text-white dark:hover:text-emerald-600 transition-all duration-500 ease-in-out font-medium">{{
                     data.name }}</a>
                         <p class="text-slate-400 mt-3">{{ data.desc }}</p>
@@ -140,33 +140,33 @@
 
 </template>
 
-<script>
+<script setup>
 import { useLanguage } from '~/composables/useLanguage'
-import image from 'assets/images/svg/design-thinking.svg';
-import image2 from 'assets/images/svg/coding.svg';
-import image3 from 'assets/images/svg/office-desk.svg';
-import { computed, ref, watch } from 'vue'
+import image from '@/assets/images/svg/design-thinking.svg';
+import image2 from '@/assets/images/svg/coding.svg';
+import image3 from '@/assets/images/svg/office-desk.svg';
+import { computed, ref } from 'vue'
 import VueEasyLightbox from 'vue-easy-lightbox'
 
 // Import electrical service images
-import elecImg1 from 'assets/images/elec service/Screenshot 2025-12-09 150607.png'
-import elecImg2 from 'assets/images/elec service/Screenshot 2025-12-09 150622.png'
-import elecImg3 from 'assets/images/elec service/Screenshot 2025-12-09 150632.png'
-import elecImg4 from 'assets/images/elec service/Screenshot 2025-12-09 150637.png'
-import elecImg5 from 'assets/images/elec service/Screenshot 2025-12-09 150644.png'
-import elecImg6 from 'assets/images/elec service/Screenshot 2025-12-09 150649.png'
-import elecImg7 from 'assets/images/elec service/Screenshot 2025-12-09 150653.png'
-import elecImg8 from 'assets/images/elec service/Screenshot 2025-12-09 150702.png'
-import elecImg9 from 'assets/images/elec service/Screenshot 2025-12-09 150707.png'
-import elecImg10 from 'assets/images/elec service/Screenshot 2025-12-09 150713.png'
-import elecImg11 from 'assets/images/elec service/Screenshot 2025-12-09 150719.png'
-import elecImg12 from 'assets/images/elec service/Screenshot 2025-12-09 150724.png'
-import elecImg13 from 'assets/images/elec service/Screenshot 2025-12-09 150729.png'
-import elecImg14 from 'assets/images/elec service/Screenshot 2025-12-09 150738.png'
-import elecImg15 from 'assets/images/elec service/Screenshot 2025-12-09 150745.png'
-import elecImg16 from 'assets/images/elec service/Screenshot 2025-12-09 150752.png'
-import elecImg17 from 'assets/images/elec service/Screenshot 2025-12-09 150811.png'
-import elecImg18 from 'assets/images/elec service/Screenshot 2025-12-09 150822.png'
+import elecImg1 from '@/assets/images/elec service/Screenshot 2025-12-09 150607.png'
+import elecImg2 from '@/assets/images/elec service/Screenshot 2025-12-09 150622.png'
+import elecImg3 from '@/assets/images/elec service/Screenshot 2025-12-09 150632.png'
+import elecImg4 from '@/assets/images/elec service/Screenshot 2025-12-09 150637.png'
+import elecImg5 from '@/assets/images/elec service/Screenshot 2025-12-09 150644.png'
+import elecImg6 from '@/assets/images/elec service/Screenshot 2025-12-09 150649.png'
+import elecImg7 from '@/assets/images/elec service/Screenshot 2025-12-09 150653.png'
+import elecImg8 from '@/assets/images/elec service/Screenshot 2025-12-09 150702.png'
+import elecImg9 from '@/assets/images/elec service/Screenshot 2025-12-09 150707.png'
+import elecImg10 from '@/assets/images/elec service/Screenshot 2025-12-09 150713.png'
+import elecImg11 from '@/assets/images/elec service/Screenshot 2025-12-09 150719.png'
+import elecImg12 from '@/assets/images/elec service/Screenshot 2025-12-09 150724.png'
+import elecImg13 from '@/assets/images/elec service/Screenshot 2025-12-09 150729.png'
+import elecImg14 from '@/assets/images/elec service/Screenshot 2025-12-09 150738.png'
+import elecImg15 from '@/assets/images/elec service/Screenshot 2025-12-09 150745.png'
+import elecImg16 from '@/assets/images/elec service/Screenshot 2025-12-09 150752.png'
+import elecImg17 from '@/assets/images/elec service/Screenshot 2025-12-09 150811.png'
+import elecImg18 from '@/assets/images/elec service/Screenshot 2025-12-09 150822.png'
 
 const elecImages = [
     elecImg1, elecImg2, elecImg3, elecImg4, elecImg5, elecImg6,
@@ -175,16 +175,16 @@ const elecImages = [
 ]
 
 // Import HVAC service images
-import hvacImg1 from 'assets/images/HVAC/Screenshot 2025-12-09 152704.png'
-import hvacImg2 from 'assets/images/HVAC/Screenshot 2025-12-09 152714.png'
-import hvacImg3 from 'assets/images/HVAC/Screenshot 2025-12-09 152725.png'
-import hvacImg4 from 'assets/images/HVAC/Screenshot 2025-12-09 152734.png'
-import hvacImg5 from 'assets/images/HVAC/Screenshot 2025-12-09 153827.png'
-import hvacImg6 from 'assets/images/HVAC/Screenshot 2025-12-09 153833.png'
-import hvacImg7 from 'assets/images/HVAC/Screenshot 2025-12-09 153838.png'
-import hvacImg8 from 'assets/images/HVAC/Screenshot 2025-12-09 153843.png'
-import hvacImg9 from 'assets/images/HVAC/Screenshot 2025-12-09 153851.png'
-import hvacImg10 from 'assets/images/HVAC/Screenshot 2025-12-09 153856.png'
+import hvacImg1 from '@/assets/images/HVAC/Screenshot 2025-12-09 152704.png'
+import hvacImg2 from '@/assets/images/HVAC/Screenshot 2025-12-09 152714.png'
+import hvacImg3 from '@/assets/images/HVAC/Screenshot 2025-12-09 152725.png'
+import hvacImg4 from '@/assets/images/HVAC/Screenshot 2025-12-09 152734.png'
+import hvacImg5 from '@/assets/images/HVAC/Screenshot 2025-12-09 153827.png'
+import hvacImg6 from '@/assets/images/HVAC/Screenshot 2025-12-09 153833.png'
+import hvacImg7 from '@/assets/images/HVAC/Screenshot 2025-12-09 153838.png'
+import hvacImg8 from '@/assets/images/HVAC/Screenshot 2025-12-09 153843.png'
+import hvacImg9 from '@/assets/images/HVAC/Screenshot 2025-12-09 153851.png'
+import hvacImg10 from '@/assets/images/HVAC/Screenshot 2025-12-09 153856.png'
 
 const hvacImages = [
     hvacImg1, hvacImg2, hvacImg3, hvacImg4, hvacImg5, hvacImg6,
@@ -192,182 +192,168 @@ const hvacImages = [
 ]
 
 // Import Infrastructure service images
-import infraImg1 from 'assets/images/infraStructure/Screenshot 2025-12-09 154353.png'
-import infraImg2 from 'assets/images/infraStructure/Screenshot 2025-12-09 154358.png'
-import infraImg3 from 'assets/images/infraStructure/Screenshot 2025-12-09 154401.png'
-import infraImg4 from 'assets/images/infraStructure/Screenshot 2025-12-09 154405.png'
-import infraImg5 from 'assets/images/infraStructure/Screenshot 2025-12-09 154410.png'
-import infraImg6 from 'assets/images/infraStructure/Screenshot 2025-12-09 154415.png'
-import infraImg7 from 'assets/images/infraStructure/Screenshot 2025-12-09 154421.png'
-import infraImg8 from 'assets/images/infraStructure/Screenshot 2025-12-09 154426.png'
+import infraImg1 from '@/assets/images/infraStructure/Screenshot 2025-12-09 154353.png'
+import infraImg2 from '@/assets/images/infraStructure/Screenshot 2025-12-09 154358.png'
+import infraImg3 from '@/assets/images/infraStructure/Screenshot 2025-12-09 154401.png'
+import infraImg4 from '@/assets/images/infraStructure/Screenshot 2025-12-09 154405.png'
+import infraImg5 from '@/assets/images/infraStructure/Screenshot 2025-12-09 154410.png'
+import infraImg6 from '@/assets/images/infraStructure/Screenshot 2025-12-09 154415.png'
+import infraImg7 from '@/assets/images/infraStructure/Screenshot 2025-12-09 154421.png'
+import infraImg8 from '@/assets/images/infraStructure/Screenshot 2025-12-09 154426.png'
 
 const infraImages = [
     infraImg1, infraImg2, infraImg3, infraImg4, infraImg5, infraImg6,
     infraImg7, infraImg8
 ]
 
-export default {
-    components: {
-        VueEasyLightbox
-    },
-    setup() {
-        const { t, currentLang } = useLanguage()
-        const isDialogOpen = ref(false)
-        const selectedServiceId = ref(null)
-        const isImageLightboxOpen = ref(false)
-        const lightboxImages = ref([])
-        const lightboxIndex = ref(0)
-        
-        const selectedService = computed(() => {
-            if (!selectedServiceId.value) return null
-            const lang = currentLang.value // Add dependency on currentLang
-            if (selectedServiceId.value === 'electrical') {
-                return {
-                    id: 'electrical',
-                    name: t('services.electricalLightCurrent.name'),
-                    fullDescription: t('services.electricalLightCurrent.fullDescription'),
-                    images: elecImages
-                }
-            }
-            if (selectedServiceId.value === 'mechanical') {
-                return {
-                    id: 'mechanical',
-                    name: t('services.hvacFirefighting.name'),
-                    fullDescription: t('services.hvacFirefighting.fullDescription'),
-                    images: hvacImages
-                }
-            }
-            if (selectedServiceId.value === 'infrastructure') {
-                return {
-                    id: 'infrastructure',
-                    name: t('services.infrastructureLandscaping.name'),
-                    fullDescription: t('services.infrastructureLandscaping.fullDescription'),
-                    images: infraImages
-                }
-            }
-            return null
-        })
-        
-        const openServiceDialog = (serviceId) => {
-            if (serviceId === 'electrical' || serviceId === 'mechanical' || serviceId === 'infrastructure') {
-                selectedServiceId.value = serviceId
-                isDialogOpen.value = true
-                if (process.client) {
-                    document.body.style.overflow = 'hidden'
-                }
-            }
+const { t, currentLang } = useLanguage()
+const isDialogOpen = ref(false)
+const selectedServiceId = ref(null)
+const isImageLightboxOpen = ref(false)
+const lightboxImages = ref([])
+const lightboxIndex = ref(0)
+
+const selectedService = computed(() => {
+    if (!selectedServiceId.value) return null
+    const lang = currentLang.value
+    if (selectedServiceId.value === 'electrical') {
+        return {
+            id: 'electrical',
+            name: t('services.electricalLightCurrent.name'),
+            fullDescription: t('services.electricalLightCurrent.fullDescription'),
+            images: elecImages
         }
-        
-        const closeServiceDialog = () => {
-            isDialogOpen.value = false
-            selectedServiceId.value = null
-            if (process.client) {
-                document.body.style.overflow = ''
-            }
+    }
+    if (selectedServiceId.value === 'mechanical') {
+        return {
+            id: 'mechanical',
+            name: t('services.hvacFirefighting.name'),
+            fullDescription: t('services.hvacFirefighting.fullDescription'),
+            images: hvacImages
         }
-        
-        const openImageLightbox = (index) => {
-            if (selectedService.value?.images) {
-                lightboxImages.value = selectedService.value.images
-                lightboxIndex.value = index
-                isImageLightboxOpen.value = true
-            }
+    }
+    if (selectedServiceId.value === 'infrastructure') {
+        return {
+            id: 'infrastructure',
+            name: t('services.infrastructureLandscaping.name'),
+            fullDescription: t('services.infrastructureLandscaping.fullDescription'),
+            images: infraImages
         }
-        
-        const closeImageLightbox = () => {
-            isImageLightboxOpen.value = false
-        }
-        
-        const datas = computed(() => {
-            // Add currentLang as dependency to force recomputation when language changes
-            const lang = currentLang.value
-            return [
-                {
-                    id: 'electrical',
-                    icon: 'uil uil-circuit',
-                    name: t('services.electricalSystems.name'),
-                    desc: t('services.electricalSystems.desc'),
-                    class: 'features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
-                },
-                {
-                    id: 'mechanical',
-                    icon: 'uil uil-cog',
-                    name: t('services.mechanicalSystems.name'),
-                    desc: t('services.mechanicalSystems.desc'),
-                    class: 'features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
-                },
-                {
-                    id: 'building',
-                    icon: 'uil uil-building',
-                    name: t('services.buildingConstruction.name'),
-                    desc: t('services.buildingConstruction.desc'),
-                    class: 'features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
-                },
-                {
-                    id: 'infrastructure',
-                    icon: 'uil uil-trees',
-                    name: t('services.infrastructureLandscaping.name'),
-                    desc: t('services.infrastructureLandscaping.desc'),
-                    class: 'features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
-                },
-                {
-                    id: 'mep',
-                    icon: 'uil uil-file-alt',
-                    name: t('services.mepDesignBOQ.name'),
-                    desc: t('services.mepDesignBOQ.desc'),
-                    class: 'features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
-                },
-                {
-                    id: 'bim',
-                    icon: 'uil uil-cube',
-                    name: t('services.bim3DModeling.name'),
-                    desc: t('services.bim3DModeling.desc'),
-                    class: 'features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
-                },
-            ]
-        })
-        
-        const items = computed(() => {
-            // Add currentLang as dependency to force recomputation when language changes
-            const lang = currentLang.value
-            return [
-                {
-                    id: 'electrical',
-                    image: image,
-                    name: t('services.electricalLightCurrent.name'),
-                    desc: t('services.electricalLightCurrent.desc')
-                },
-                {
-                    id: 'hvac',
-                    image: image2,
-                    name: t('services.hvacFirefighting.name'),
-                    desc: t('services.hvacFirefighting.desc')
-                },
-                {
-                    id: 'plumbing',
-                    image: image3,
-                    name: t('services.plumbingInfrastructure.name'),
-                    desc: t('services.plumbingInfrastructure.desc')
-                }
-            ]
-        })
-        
-        return { 
-            t, 
-            datas, 
-            items,
-            isDialogOpen,
-            selectedService,
-            openServiceDialog,
-            closeServiceDialog,
-            isImageLightboxOpen,
-            lightboxImages,
-            lightboxIndex,
-            openImageLightbox,
-            closeImageLightbox
+    }
+    return null
+})
+
+const openServiceDialog = (serviceId) => {
+    // Mapping for consistent IDs
+    let mappedId = serviceId
+    if (serviceId === 'mepDesign') mappedId = 'electrical' // Example mapping if needed
+    if (serviceId === 'bim') mappedId = 'mechanical' // Example mapping if needed
+    if (serviceId === 'building') mappedId = 'infrastructure' // Example mapping if needed
+
+    if (mappedId === 'electrical' || mappedId === 'mechanical' || mappedId === 'infrastructure') {
+        selectedServiceId.value = mappedId
+        isDialogOpen.value = true
+        if (process.client) {
+            document.body.style.overflow = 'hidden'
         }
     }
 }
+
+const closeServiceDialog = () => {
+    isDialogOpen.value = false
+    selectedServiceId.value = null
+    if (process.client) {
+        document.body.style.overflow = ''
+    }
+}
+
+const openImageLightbox = (index) => {
+    if (selectedService.value?.images) {
+        lightboxImages.value = selectedService.value.images
+        lightboxIndex.value = index
+        isImageLightboxOpen.value = true
+    }
+}
+
+const closeImageLightbox = () => {
+    isImageLightboxOpen.value = false
+}
+
+const datas = computed(() => {
+    const lang = currentLang.value
+    return [
+        {
+            id: 'electrical',
+            icon: 'uil uil-circuit',
+            name: t('services.electricalSystems.name'),
+            desc: t('services.electricalSystems.desc'),
+            class: 'features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
+        },
+        {
+            id: 'mechanical',
+            icon: 'uil uil-cog',
+            name: t('services.mechanicalSystems.name'),
+            desc: t('services.mechanicalSystems.desc'),
+            class: 'features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
+        },
+        {
+            id: 'building',
+            icon: 'uil uil-building',
+            name: t('services.buildingConstruction.name'),
+            desc: t('services.buildingConstruction.desc'),
+            class: 'features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
+        },
+        {
+            id: 'infrastructure',
+            icon: 'uil uil-trees',
+            name: t('services.infrastructureLandscaping.name'),
+            desc: t('services.infrastructureLandscaping.desc'),
+            class: 'features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
+        },
+        {
+            id: 'mep',
+            icon: 'uil uil-file-alt',
+            name: t('services.mepDesignBOQ.name'),
+            desc: t('services.mepDesignBOQ.desc'),
+            class: 'features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
+        },
+        {
+            id: 'bim',
+            icon: 'uil uil-cube',
+            name: t('services.bim3DModeling.name'),
+            desc: t('services.bim3DModeling.desc'),
+            class: 'features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
+        },
+    ]
+})
+
+const items = computed(() => {
+    const lang = currentLang.value
+    return [
+        {
+            id: 'electrical',
+            image: image,
+            name: t('services.electricalLightCurrent.name'),
+            desc: t('services.electricalLightCurrent.desc')
+        },
+        {
+            id: 'hvac',
+            image: image2,
+            name: t('services.hvacFirefighting.name'),
+            desc: t('services.hvacFirefighting.desc')
+        },
+        {
+            id: 'plumbing',
+            image: image3,
+            name: t('services.plumbingInfrastructure.name'),
+            desc: t('services.plumbingInfrastructure.desc')
+        }
+    ]
+})
+
+defineExpose({
+    openServiceDialog
+})
 </script>
 
 <style lang="scss" scoped></style>

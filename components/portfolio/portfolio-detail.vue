@@ -86,22 +86,22 @@ import { useRoute } from 'vue-router'
 import VueEasyLightbox from 'vue-easy-lightbox'
 
 // Import Mostakbal Masr images
-import mostakbalImg1 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 155820.png'
-import mostakbalImg2 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 155828.png'
-import mostakbalImg3 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 155832.png'
-import mostakbalImg4 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 155837.png'
-import mostakbalImg5 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 155851.png'
-import mostakbalImg6 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 155855.png'
-import mostakbalImg7 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 155921.png'
-import mostakbalImg8 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 155933.png'
-import mostakbalImg9 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 160034.png'
-import mostakbalImg10 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 160042.png'
-import mostakbalImg11 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 160047.png'
-import mostakbalImg12 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 160052.png'
-import mostakbalImg13 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 160101.png'
-import mostakbalImg14 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 160108.png'
-import mostakbalImg15 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 160113.png'
-import mostakbalImg16 from 'assets/images/mostakbal masr/Screenshot 2025-12-09 160118.png'
+import mostakbalImg1 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 155820.png'
+import mostakbalImg2 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 155828.png'
+import mostakbalImg3 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 155832.png'
+import mostakbalImg4 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 155837.png'
+import mostakbalImg5 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 155851.png'
+import mostakbalImg6 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 155855.png'
+import mostakbalImg7 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 155921.png'
+import mostakbalImg8 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 155933.png'
+import mostakbalImg9 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 160034.png'
+import mostakbalImg10 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 160042.png'
+import mostakbalImg11 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 160047.png'
+import mostakbalImg12 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 160052.png'
+import mostakbalImg13 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 160101.png'
+import mostakbalImg14 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 160108.png'
+import mostakbalImg15 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 160113.png'
+import mostakbalImg16 from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 160118.png'
 
 const mostakbalMasrImages = [
     mostakbalImg1, mostakbalImg2, mostakbalImg3, mostakbalImg4,
@@ -111,16 +111,16 @@ const mostakbalMasrImages = [
 ]
 
 // Import Monorail Garage images
-import monorailImg1 from 'assets/images/monorail/Screenshot 2025-12-09 161651.png'
-import monorailImg2 from 'assets/images/monorail/Screenshot 2025-12-09 161657.png'
-import monorailImg3 from 'assets/images/monorail/Screenshot 2025-12-09 161703.png'
-import monorailImg4 from 'assets/images/monorail/Screenshot 2025-12-09 161708.png'
-import monorailImg5 from 'assets/images/monorail/Screenshot 2025-12-09 161714.png'
-import monorailImg6 from 'assets/images/monorail/Screenshot 2025-12-09 161718.png'
-import monorailImg7 from 'assets/images/monorail/Screenshot 2025-12-09 161725.png'
-import monorailImg8 from 'assets/images/monorail/Screenshot 2025-12-09 161730.png'
-import monorailImg9 from 'assets/images/monorail/Screenshot 2025-12-09 161736.png'
-import monorailImg10 from 'assets/images/monorail/Screenshot 2025-12-09 161742.png'
+import monorailImg1 from '@/assets/images/monorail/Screenshot 2025-12-09 161651.png'
+import monorailImg2 from '@/assets/images/monorail/Screenshot 2025-12-09 161657.png'
+import monorailImg3 from '@/assets/images/monorail/Screenshot 2025-12-09 161703.png'
+import monorailImg4 from '@/assets/images/monorail/Screenshot 2025-12-09 161708.png'
+import monorailImg5 from '@/assets/images/monorail/Screenshot 2025-12-09 161714.png'
+import monorailImg6 from '@/assets/images/monorail/Screenshot 2025-12-09 161718.png'
+import monorailImg7 from '@/assets/images/monorail/Screenshot 2025-12-09 161725.png'
+import monorailImg8 from '@/assets/images/monorail/Screenshot 2025-12-09 161730.png'
+import monorailImg9 from '@/assets/images/monorail/Screenshot 2025-12-09 161736.png'
+import monorailImg10 from '@/assets/images/monorail/Screenshot 2025-12-09 161742.png'
 
 const monorailGarageImages = [
     monorailImg1, monorailImg2, monorailImg3, monorailImg4,
@@ -129,14 +129,14 @@ const monorailGarageImages = [
 ]
 
 // Import Administration 90th Street images
-import admin90thImg1 from 'assets/images/90th/Screenshot 2025-12-09 162536.png'
-import admin90thImg2 from 'assets/images/90th/Screenshot 2025-12-09 162541.png'
-import admin90thImg3 from 'assets/images/90th/Screenshot 2025-12-09 162546.png'
-import admin90thImg4 from 'assets/images/90th/Screenshot 2025-12-09 162551.png'
-import admin90thImg5 from 'assets/images/90th/Screenshot 2025-12-09 162558.png'
-import admin90thImg6 from 'assets/images/90th/Screenshot 2025-12-09 162603.png'
-import admin90thImg7 from 'assets/images/90th/Screenshot 2025-12-09 162611.png'
-import admin90thImg8 from 'assets/images/90th/Screenshot 2025-12-09 162615.png'
+import admin90thImg1 from '@/assets/images/90th/Screenshot 2025-12-09 162536.png'
+import admin90thImg2 from '@/assets/images/90th/Screenshot 2025-12-09 162541.png'
+import admin90thImg3 from '@/assets/images/90th/Screenshot 2025-12-09 162546.png'
+import admin90thImg4 from '@/assets/images/90th/Screenshot 2025-12-09 162551.png'
+import admin90thImg5 from '@/assets/images/90th/Screenshot 2025-12-09 162558.png'
+import admin90thImg6 from '@/assets/images/90th/Screenshot 2025-12-09 162603.png'
+import admin90thImg7 from '@/assets/images/90th/Screenshot 2025-12-09 162611.png'
+import admin90thImg8 from '@/assets/images/90th/Screenshot 2025-12-09 162615.png'
 
 const administration90thImages = [
     admin90thImg1, admin90thImg2, admin90thImg3, admin90thImg4,
@@ -144,28 +144,28 @@ const administration90thImages = [
 ]
 
 // Import New Administrative Capital images
-import newAdminCapitalImg1 from 'assets/images/capitalnew/Screenshot 2025-12-09 163033.png'
-import newAdminCapitalImg2 from 'assets/images/capitalnew/Screenshot 2025-12-09 163039.png'
-import newAdminCapitalImg3 from 'assets/images/capitalnew/Screenshot 2025-12-09 163043.png'
-import newAdminCapitalImg4 from 'assets/images/capitalnew/Screenshot 2025-12-09 163048.png'
+import newAdminCapitalImg1 from '@/assets/images/capitalnew/Screenshot 2025-12-09 163033.png'
+import newAdminCapitalImg2 from '@/assets/images/capitalnew/Screenshot 2025-12-09 163039.png'
+import newAdminCapitalImg3 from '@/assets/images/capitalnew/Screenshot 2025-12-09 163043.png'
+import newAdminCapitalImg4 from '@/assets/images/capitalnew/Screenshot 2025-12-09 163048.png'
 
 const newAdminCapitalImages = [
     newAdminCapitalImg1, newAdminCapitalImg2, newAdminCapitalImg3, newAdminCapitalImg4
 ]
 
 // Import New Damietta images
-import newDamiettaImg1 from 'assets/images/damietta/Screenshot 2025-12-09 164002.png'
-import newDamiettaImg2 from 'assets/images/damietta/Screenshot 2025-12-09 164007.png'
-import newDamiettaImg3 from 'assets/images/damietta/Screenshot 2025-12-09 164012.png'
-import newDamiettaImg4 from 'assets/images/damietta/Screenshot 2025-12-09 164017.png'
+import newDamiettaImg1 from '@/assets/images/damietta/Screenshot 2025-12-09 164002.png'
+import newDamiettaImg2 from '@/assets/images/damietta/Screenshot 2025-12-09 164007.png'
+import newDamiettaImg3 from '@/assets/images/damietta/Screenshot 2025-12-09 164012.png'
+import newDamiettaImg4 from '@/assets/images/damietta/Screenshot 2025-12-09 164017.png'
 
 const newDamiettaImages = [
     newDamiettaImg1, newDamiettaImg2, newDamiettaImg3, newDamiettaImg4
 ]
 
 // Import New Administrative Capital Pumps images
-import newAdminCapitalPumpsImg1 from 'assets/images/New Administrative/Screenshot 2025-12-09 164250.png'
-import newAdminCapitalPumpsImg2 from 'assets/images/New Administrative/Screenshot 2025-12-09 164257.png'
+import newAdminCapitalPumpsImg1 from '@/assets/images/New Administrative/Screenshot 2025-12-09 164250.png'
+import newAdminCapitalPumpsImg2 from '@/assets/images/New Administrative/Screenshot 2025-12-09 164257.png'
 
 const newAdminCapitalPumpsImages = [
     newAdminCapitalPumpsImg1, newAdminCapitalPumpsImg2

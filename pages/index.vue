@@ -1,10 +1,24 @@
 <template>
-    <navBar />
+    <navBar @openServiceDialog="handleServiceDialog" />
     <!-- Hero Start -->
 
     <section class="py-36 lg:py-64 w-full table relative bg-center bg-cover hero-section"
         id="home">
-        <div class="absolute inset-0 bg-black opacity-80"></div>
+        <!-- Background Slider -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div 
+                class="slider-container"
+                :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
+            >
+                <div 
+                    v-for="(image, index) in backgroundImages" 
+                    :key="index"
+                    class="slider-slide"
+                    :style="{ backgroundImage: `url(${image})` }"
+                ></div>
+            </div>
+        </div>
+        <div class="absolute inset-0 bg-black opacity-70"></div>
         <div class="container relative">
             <div class="grid grid-cols-1 mt-12">
                 <h4
@@ -28,10 +42,11 @@
     </section><!--end section-->
     <!-- Hero End -->
     <about />
-    <services />
+    <services ref="servicesRef" />
     <portfolio />
     <client />
     <blog />
+    <suppliers />
     <getintouch />
     <fooTer />
 
@@ -46,9 +61,16 @@ import services from '@/components/services.vue';
 import portfolio from '@/components/portfolio/portfolio.vue';
 import client from '@/components/client.vue';
 import blog from '@/components/blog/blog.vue';
+import suppliers from '@/components/suppliers.vue';
 import getintouch from '@/components/getInTouch.vue'
 import fooTer from '@/components/footer.vue';
 import { useLanguage } from '~/composables/useLanguage'
+
+// Import background images
+import heroBg from '@/assets/images/bg/hero-bg.jpg'
+import bg1 from '@/assets/images/bg/1.jpg'
+import bg2 from '@/assets/images/bg/2.jpg'
+import bg3 from '@/assets/images/bg/3.jpg'
 
 const { t, currentLang } = useLanguage()
 const displayText = ref('')
@@ -56,6 +78,20 @@ let currentIndex = 0
 let currentWordIndex = 0
 let isDeleting = false
 let typewriterTimeout = null
+
+// Background slider
+const currentSlide = ref(0)
+const backgroundImages = [heroBg, bg1, bg2, bg3]
+let sliderInterval = null
+
+// Services reference
+const servicesRef = ref(null)
+
+const handleServiceDialog = (serviceKey) => {
+    if (servicesRef.value && servicesRef.value.openServiceDialog) {
+        servicesRef.value.openServiceDialog(serviceKey)
+    }
+}
 
 const stopTypewriter = () => {
   if (typewriterTimeout) {
@@ -106,10 +142,24 @@ const startTypewriter = () => {
   typewriterTimeout = setTimeout(type, 300)
 }
 
+const startSlider = () => {
+  sliderInterval = setInterval(() => {
+    currentSlide.value = (currentSlide.value + 1) % backgroundImages.length
+  }, 3000) // تغيير الصورة كل 3 ثواني
+}
+
+const stopSlider = () => {
+  if (sliderInterval) {
+    clearInterval(sliderInterval)
+    sliderInterval = null
+  }
+}
+
 onMounted(() => {
   if (process.client) {
     setTimeout(() => {
       startTypewriter()
+      startSlider()
     }, 500)
   }
 })
@@ -120,31 +170,30 @@ watch(currentLang, () => {
 
 onBeforeUnmount(() => {
   stopTypewriter()
+  stopSlider()
 })
 </script>
 
 <style scoped>
-/* Hero background image */
+/* Hero section */
 .hero-section {
-  background-image: url('~/assets/images/bg/hero-bg.jpg');
-  background-position: center center;
+  position: relative;
+}
+
+/* Horizontal slider */
+.slider-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.slider-slide {
+  flex: 0 0 100%; /* Fix: each slide takes 100% of the viewport and doesn't shrink */
+  height: 100%;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-/* Fixed background for desktop only */
-@media (min-width: 768px) {
-  .hero-section {
-    background-attachment: fixed;
-  }
-}
-
-/* Mobile optimization */
-@media (max-width: 767px) {
-  .hero-section {
-    background-attachment: scroll;
-    background-position: center center;
-  }
 }
 
 /* Custom typewriter effect */

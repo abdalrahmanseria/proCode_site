@@ -1,18 +1,18 @@
 <template>
-     <!-- Hero Start -->
-     <section class="position-relative bg-[url('../../assets/images/bg/auth.jpg')] bg-center bg-cover">
-            <div class="absolute inset-0 bg-black opacity-90"></div>
-            <div class="container-fluid relative">
-                <div class="grid grid-cols-1">
-                    <div class="lg:col-span-4">
-                        <div class="flex flex-col min-h-screen md:px-12 py-12 px-3">
-                            <!-- Start Logo -->
-                            <div class="text-center mx-auto">
-                                <NuxtLink to="/" class="flex items-center justify-center">
-                                    <img src="assets/images/logo (2).png" class="h-24" alt="ELSHARQUE">
-                                </NuxtLink>
-                            </div>
-                            <!-- End Logo -->
+    <!-- Hero Start -->
+    <section class="position-relative bg-center bg-cover hero-auth">
+           <div class="absolute inset-0 bg-black opacity-90"></div>
+           <div class="container-fluid relative">
+               <div class="grid grid-cols-1">
+                   <div class="lg:col-span-4">
+                       <div class="flex flex-col min-h-screen md:px-12 py-12 px-3">
+                           <!-- Start Logo -->
+                           <div class="text-center mx-auto">
+                               <NuxtLink to="/" class="flex items-center justify-center">
+                                   <img :src="logoImg" class="h-24" alt="ELSHARQUE">
+                               </NuxtLink>
+                           </div>
+                           <!-- End Logo -->
 
                             <!-- Start Content -->
                             <div class="text-center my-auto">
@@ -66,17 +66,16 @@
         <!-- Hero End -->
 </template>
 
-<script>
-    export default {
-        data() {
-            return {
-                date: new Date().getFullYear()
-            }
-        },
-        
-    }
+<script setup>
+import { ref } from 'vue'
+import logoImg from '@/assets/images/logo (2).png'
+import authImg from '@/assets/images/bg/auth.jpg'
+
+const date = ref(new Date().getFullYear())
 </script>
 
 <style lang="scss" scoped>
-
+.hero-auth {
+    background-image: v-bind('`url(${authImg})`');
+}
 </style>

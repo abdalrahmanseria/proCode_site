@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
 /* تخصيص اللون الأساسي ليكون أغمق */
 :root {
   --color-emerald-600: #064e3b;
@@ -30,4 +35,69 @@
 
 .hover\:text-emerald-700:hover {
   color: #053d2f !important;
+}
+
+/* Section target styling */
+.section-target {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+/* Highlight animation for sections */
+@keyframes highlightFlash {
+  0% {
+    background-color: rgba(6, 78, 59, 0);
+    box-shadow: 0 0 0 0 rgba(6, 78, 59, 0);
+    transform: scale(1);
+  }
+  10% {
+    background-color: rgba(6, 78, 59, 0.3);
+    box-shadow: 0 0 30px 10px rgba(6, 78, 59, 0.5);
+    transform: scale(1.05);
+  }
+  30% {
+    background-color: rgba(6, 78, 59, 0.35);
+    box-shadow: 0 0 40px 15px rgba(6, 78, 59, 0.6);
+    transform: scale(1.08);
+  }
+  60% {
+    background-color: rgba(6, 78, 59, 0.3);
+    box-shadow: 0 0 35px 10px rgba(6, 78, 59, 0.5);
+    transform: scale(1.05);
+  }
+  100% {
+    background-color: rgba(6, 78, 59, 0);
+    box-shadow: 0 0 0 0 rgba(6, 78, 59, 0);
+    transform: scale(1);
+  }
+}
+
+@keyframes borderFlash {
+  0% {
+    border-left: 0px solid #064e3b;
+  }
+  20% {
+    border-left: 8px solid #064e3b;
+  }
+  40% {
+    border-left: 6px solid #064e3b;
+  }
+  60% {
+    border-left: 8px solid #064e3b;
+  }
+  80% {
+    border-left: 4px solid #064e3b;
+  }
+  100% {
+    border-left: 0px solid #064e3b;
+  }
+}
+
+.highlight-section {
+  animation: highlightFlash 3s ease-in-out, borderFlash 3s ease-in-out !important;
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  position: relative !important;
+  z-index: 50 !important;
+  box-shadow: 0 10px 40px rgba(6, 78, 59, 0.3) !important;
 }

@@ -21,11 +21,11 @@
 </template>
 
 <script setup>
-import client1 from 'assets/images/clients/Screenshot 2025-12-10 145421.png'
-import client2 from 'assets/images/clients/Screenshot 2025-12-10 145425.png'
-import client3 from 'assets/images/clients/Screenshot 2025-12-10 145431.png'
-import client4 from 'assets/images/clients/Screenshot 2025-12-10 145437.png'
-import client5 from 'assets/images/clients/Screenshot 2025-12-10 145447.png'
+import client1 from '@/assets/images/clients/Screenshot 2025-12-10 145421.png'
+import client2 from '@/assets/images/clients/Screenshot 2025-12-10 145425.png'
+import client3 from '@/assets/images/clients/Screenshot 2025-12-10 145431.png'
+import client4 from '@/assets/images/clients/Screenshot 2025-12-10 145437.png'
+import client5 from '@/assets/images/clients/Screenshot 2025-12-10 145447.png'
 import { useLanguage } from '~/composables/useLanguage'
 
 const { t } = useLanguage()
