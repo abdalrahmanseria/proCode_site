@@ -2,8 +2,8 @@
         <nav class="navbar" id="navbar" @scroll="handleScroll">
             <div class="container-fluid px-4 md:px-10 flex lg_992:flex-nowrap flex-wrap items-center justify-between">
                 <NuxtLink class="navbar-brand flex items-center flex-shrink-0" to="/">
-                    <img :src="logoImg" class="h-24 md:h-28 dark:hidden" alt="ProCode Solutions">
-                    <img :src="logoImg" class="h-24 md:h-28 hidden dark:inline-block" alt="ProCode Solutions">
+                    <img :src="logoImg" class="h-24 md:h-28 dark:hidden logo-image" alt="ProCode Solutions">
+                    <img :src="logoImg" class="h-24 md:h-28 hidden dark:inline-block logo-image" alt="ProCode Solutions">
                 </NuxtLink>
 
                 <div class="nav-icons flex items-center lg_992:order-2">
@@ -90,7 +90,7 @@
 <script setup>
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
-import logoImg from '@/assets/images/proCodeLogo.jpg'
+import logoImg from '@/assets/images/proCodeLogo.png'
 
 const { t, currentLang, isRTL, toggleLanguage } = useLanguage()
 const toggle = ref(false)
@@ -292,5 +292,31 @@ const onscroll = () => {
 .dark .dropdown-link:hover {
     background: #1e40af;
     color: white;
+}
+
+.logo-image {
+    border-radius: 12px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.dark .logo-image {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.dark .logo-image:hover {
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
 }
 </style>
