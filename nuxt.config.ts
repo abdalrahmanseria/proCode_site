@@ -9,8 +9,8 @@ export default defineNuxtConfig({
 ],
   app: {
     head: {
-      title: 'ELSHARQUE FOR General Contracting and Maintenance',
-      titleTemplate: 'ELSHARQUE FOR General Contracting and Maintenance',
+      title: 'ProCode Solutions',
+      titleTemplate: 'ProCode Solutions',
       htmlAttrs: { class: 'light scroll-smooth', dir:'ltr' },
       bodyAttrs: {
         class: 'font-rubik text-base text-slate-900 dark:text-white dark:bg-slate-900',

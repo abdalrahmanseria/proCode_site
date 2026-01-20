@@ -25,36 +25,36 @@ const translations = {
         chairmanWord: 'Chairman Word'
       },
       servicesMenu: {
-        electrical: 'Electrical Systems',
-        mechanical: 'Mechanical Systems',
-        building: 'Building Construction',
-        infrastructure: 'Infrastructure & Landscaping',
-        mepDesign: 'MEP Design & BOQ',
-        bim: 'BIM 3D Modeling'
+        aiLLM: 'AI & LLM Integration',
+        digitalTransformation: 'Digital Transformation',
+        appDevelopment: 'Custom App Development',
+        healthcare: 'Healthcare Management',
+        aiCoaching: 'AI Coaching Platforms',
+        ecommerce: 'E-commerce & Payments'
       }
     },
     hero: {
-      title: 'Welcome to ELSHARQUE',
-      subtitle: 'Leading in MEP',
-      description: 'We are one of the most prominent and leading companies in the MEP contracting and maintenance sector. We have successfully delivered major projects across the Egyptian market.',
-      typewriterWords: ['Contracting', 'Maintenance', 'Construction', 'Solutions']
+      title: 'ProCode Solutions: Redefining the Future through Intelligent Code.',
+      subtitle: 'We don\'t just build software; we create AI-driven ecosystems that transform businesses.',
+      description: 'From AI pet care to smart clinic management, we bring your vision to life.',
+      typewriterWords: ['AI Solutions', 'Digital Transformation', 'Healthcare Systems', 'App Development']
     },
     about: {
       whoWeAre: 'Who We Are ?',
-      title: 'ELSHARQUE FOR General Contracting and Maintenance',
-      description: 'We are one of the most prominent and leading companies in the MEP contracting and maintenance sector. We have successfully delivered major projects across the Egyptian market, supported by a strong portfolio, an exceptional workforce, and outstanding after-sales service.',
+      title: 'ProCode Solutions',
+      description: 'We are a forward-thinking technology company specializing in AI-integrated software and digital transformation. We believe that technology should do more than just function—it should change lives for the better.',
       visionTitle: 'Vision',
-      vision: 'Our vision is to always remain one of the national companies supporting the advancement of sustainable development in the field of construction and building.',
+      vision: 'To be a global leader in AI-driven innovation, empowering businesses to reach their full potential through smart automation.',
       missionTitle: 'Mission',
-      mission: 'Assist in the development and construction of strategic, logistical, educational, residential, and commercial projects by recruiting and training a highly skilled and qualified workforce, helping to reduce unemployment in Egyptian society.',
+      mission: 'To provide high-quality, scalable digital solutions (Mobile, Web, AI) that solve real-world problems and bridge the gap between technology and daily life.',
       chairmanWord: {
         title: 'Chairman Word',
         greeting: 'Dear valued stakeholders,',
         paragraph1: 'As the chairman of our esteemed organization, I am delighted to address you. I am profoundly grateful for the trust you have bestowed upon us, enabling us to serve you and contribute to your prosperity.',
         paragraph2: 'Our strong vision and well-defined mission form the bedrock of our operations. We constantly innovate to surpass expectations and meet our customers\' evolving needs.',
-        paragraph3: 'At EL-SHARQUE COMPANY, we believe success is built upon unwavering commitment, integrity, and excellence. Our exceptional team, coupled with cutting-edge technology, delivers projects of exceptional quality, on time and within budget.',
-        paragraph4: 'We cherish our relationships with clients, partners, and stakeholders, committed to nurturing these connections for years to come. Your support inspires us to raise the bar even higher.',
-        paragraph5: 'Thank you for your continued support and trust in EL-SHARQUE COMPANY. Together, let us continue to build a future that is powered by innovation, reliability, and excellence.',
+        paragraph3: 'At ProCode Solutions, we believe success is built upon unwavering commitment, integrity, and excellence. Our exceptional team, coupled with cutting-edge AI technology, delivers solutions of exceptional quality that transform businesses.',
+        paragraph4: 'We cherish our relationships with clients, partners, and stakeholders, committed to nurturing these connections for years to come. Your support inspires us to raise the bar even higher in AI-driven innovation.',
+        paragraph5: 'Thank you for your continued support and trust in ProCode Solutions. Together, let us continue to build a future that is powered by intelligent code, innovation, and excellence.',
         closing: 'Warm regards,',
         ceoName: 'Dr. Eng. Ahmed Khaled',
         ceoTitle: 'CEO',
@@ -64,134 +64,104 @@ const translations = {
     services: {
       whatWeDo: 'What We Do ?',
       title: 'Perfect Solution For Your Business',
-      description: 'ELSHARQUE offers comprehensive solutions tailored to meet your business needs and drive success.',
+      description: 'ProCode Solutions offers comprehensive AI-driven solutions tailored to meet your business needs and drive digital transformation.',
       readMore: 'Read More',
       workProcess: 'Work Process',
-      digitalSystem: 'Digital System For Our Business',
-      digitalSystemDesc: 'Our digital systems and processes are designed to streamline your business operations and maximize efficiency.',
-      electricalSystems: {
-        name: 'Electrical Systems',
-        desc: 'Supply, installation, commissioning, start-up, operation, and maintenance of all electrical systems (Power and light current).'
+      digitalSystem: 'Digital Systems',
+      digitalSystemDesc: 'Our digital systems and processes are designed to streamline your business operations and maximize efficiency through AI-powered automation.',
+      aiLLMIntegration: {
+        name: 'AI & LLM Integration',
+        desc: 'Building smart systems like Dog Life AI that use Large Language Models to analyze behavior and provide deep insights.',
+        fullDescription: 'Building smart systems like Dog Life AI that use Large Language Models to analyze behavior and provide deep insights. We leverage cutting-edge AI technology to create intelligent solutions that understand context, learn from data, and provide actionable insights for businesses across various industries.'
       },
-      mechanicalSystems: {
-        name: 'Mechanical Systems',
-        desc: 'Supply, installation, commissioning, start-up, operation, and maintenance of all mechanical systems (HVAC, Firefighting, Plumbing and Medical Gas).'
+      digitalTransformation: {
+        name: 'Digital Transformation (LMENUS)',
+        desc: 'Digitizing traditional businesses like restaurants with cloud-based ordering and management systems.',
+        fullDescription: 'Digitizing traditional businesses like restaurants with cloud-based ordering and management systems. We transform legacy operations into modern, efficient digital ecosystems that streamline processes, reduce costs, and enhance customer experiences through innovative cloud-based solutions.'
       },
-      buildingConstruction: {
-        name: 'Building Construction',
-        desc: 'Building construction and interior finishes with a commitment to quality and client satisfaction.'
+      customAppDevelopment: {
+        name: 'Custom App Development',
+        desc: 'Developing high-performance iOS and Android applications with secure payment integrations like Stripe.',
+        fullDescription: 'Developing high-performance iOS and Android applications with secure payment integrations like Stripe. Our mobile apps are built with scalability, security, and user experience in mind, featuring seamless payment processing and robust backend infrastructure.'
       },
-      infrastructureLandscaping: {
-        name: 'Infrastructure & Landscaping',
-        desc: 'Our company specializes in infrastructure networks and landscaping, providing comprehensive solutions with expertise and innovation.',
-        fullDescription: 'Our company specializes in infrastructure networks and landscaping, providing comprehensive solutions with expertise and innovation.\n\nELSHARQUE is a leading specialist in the design and implementation of efficient and reliable plumbing systems. Our expertise covers a wide range of services, including: Domestic Water Supply network (incl. pumps, pipe network, heaters, fixtures), Drainage system (submersible pumps, pipe networks, fixtures, inspection chambers, manholes, Drain Points etc.), Swimming pool and water features.'
+      healthcareManagement: {
+        name: 'Healthcare Management',
+        desc: 'Providing specialized systems like My Clinic System to manage patient data, scheduling, and medical records.',
+        fullDescription: 'Providing specialized systems like My Clinic System to manage patient data, scheduling, and medical records. Our healthcare solutions ensure HIPAA compliance, secure data management, and streamlined workflows for medical professionals.'
       },
-      mepDesignBOQ: {
-        name: 'MEP Design & BOQ',
-        desc: 'Prepare all MEP design, Specs and BOQ with professional expertise and attention to detail.'
+      aiCoachingPlatforms: {
+        name: 'AI Coaching Platforms',
+        desc: 'Creating personalized fitness and nutrition experiences powered by intelligent algorithms.',
+        fullDescription: 'Creating personalized fitness and nutrition experiences powered by intelligent algorithms. Our AI coaching platforms analyze user data to provide customized workout plans, nutrition recommendations, and progress tracking for optimal health outcomes.'
       },
-      bim3DModeling: {
-        name: 'BIM 3D Modeling',
-        desc: 'Prepare all BIM 3D models from LOD 100 up to LOD 500 for comprehensive project visualization and planning.'
+      ecommercePayments: {
+        name: 'E-commerce & Payments',
+        desc: 'Implementing robust financial integrations and in-app purchase systems for global markets.',
+        fullDescription: 'Implementing robust financial integrations and in-app purchase systems for global markets. We integrate secure payment gateways, manage transactions across multiple currencies, and ensure compliance with international financial regulations.'
       },
-      electricalLightCurrent: {
-        name: 'Electrical & Light Current Systems',
-        desc: 'ELSHARQUE is a premier provider of electrical and light current systems, offering cutting-edge solutions for a wide range of applications. Our expertise includes the design, installation, and maintenance of power distribution systems, lighting solutions, and advanced light current systems such as fire alarm, CCTV, access control, and data networks.',
-        fullDescription: 'ELSHARQUE is a premier provider of electrical and light current systems, offering cutting-edge solutions for a wide range of applications. Our expertise includes the design, installation, and maintenance of power distribution systems, lighting solutions, and advanced light current systems such as fire alarm, CCTV, access control, and data networks. With a focus on innovation, safety, and efficiency, we deliver tailored solutions that meet the unique demands of residential, commercial, and industrial projects.'
+      aiAnalysis: {
+        name: 'AI Analysis & Data Science',
+        desc: 'We utilize advanced AI to process data, whether it\'s pet behavior or fitness tracking.',
+        fullDescription: 'We utilize advanced AI to process data, whether it\'s pet behavior or fitness tracking. Our data science team employs machine learning algorithms to extract meaningful patterns, predict trends, and provide actionable insights from complex datasets.'
       },
-      hvacFirefighting: {
-        name: 'HVAC & Firefighting Systems',
-        desc: 'ELSHARQUE company is a leading provider of comprehensive HVAC solutions, specializing in the design, installation, and maintenance of advanced climate control systems. We are also a trusted leader in the design, installation, and maintenance of advanced fire-fighting systems, providing comprehensive solutions tailored to meet the highest safety standards.',
-        fullDescription: 'ELSHARQUE company is a leading provider of comprehensive HVAC solutions, specializing in the design, installation, and maintenance of advanced climate control systems. Our expertise spans a wide range of technologies, including: DX split units, chilled water systems, VRV/VRF systems, Smoke control, Ventilation systems, ETS system.\n\nELSHARQUE is a trusted leader in the design, installation, and maintenance of advanced fire-fighting systems. We specialize in providing comprehensive solutions tailored to meet the highest safety standards, including water-based systems such as sprinklers and fire hose cabinets, clean agent systems like: FM200 and CO2, water mist, foam systems, Water sprinkler system, AEROSOL SYSTEM.'
+      cloudDashboards: {
+        name: 'Real-time Cloud Dashboards',
+        desc: 'We provide managers with full control over their business, from menu pricing to clinical financial reports.',
+        fullDescription: 'We provide managers with full control over their business, from menu pricing to clinical financial reports. Our cloud-based dashboards offer real-time analytics, customizable reporting, and intuitive interfaces for comprehensive business management.'
       },
-      plumbingInfrastructure: {
-        name: 'Plumbing & Infrastructure',
-        desc: 'ELSHARQUE is a leading specialist in the design and implementation of efficient and reliable plumbing systems. Our expertise covers domestic water supply networks, drainage systems, swimming pools, and water features. We also specialize in infrastructure networks and landscaping, providing comprehensive solutions with expertise and innovation.'
+      paymentGateways: {
+        name: 'Secure Payment Gateways',
+        desc: 'Integration of Stripe and In-App purchases to ensure seamless global transactions.',
+        fullDescription: 'Integration of Stripe and In-App purchases to ensure seamless global transactions. We implement secure, PCI-compliant payment processing systems that support multiple payment methods, currencies, and provide fraud protection for businesses worldwide.'
       }
     },
     portfolio: {
       title: 'Portfolio',
-      subtitle: 'Elsharque Works & Projects',
-      description: 'Explore our portfolio of successful projects and see how Elsharque delivers excellence in every endeavor.',
+      subtitle: 'Our Portfolio',
+      description: 'Explore our portfolio of successful projects and see how ProCode Solutions delivers excellence in AI-driven innovation.',
       viewPortfolio: 'View Portfolio',
-      readyToStart: 'Ready to start your next project with Elsharque?',
-      contactToday: 'Contact us today and let Elsharque help you achieve your goals with our expertise and innovative solutions.',
+      readyToStart: 'Ready to start your next project with ProCode Solutions?',
+      contactToday: 'Contact us today and let ProCode Solutions help you achieve your goals with our expertise and innovative AI solutions.',
       projectName: 'Project',
       projectCategory: 'Category',
       previousProjects: 'Previous Projects',
       projects: [
-        'Onion Factory - Dabaa - Mostakbal Misr Agency',
-        'Andalus Garage (Monorail Garage) - Fifth Settlement - National Company',
-        'Administrative Building - 90th Street - Fifth Settlement - National Company',
-        'Electromechanical Networks - Mostakbal Misr Agency Management - Dabaa - Mostakbal Misr Agency',
-        'Officers Hotel - Dabaa - Mostakbal Misr Agency',
-        'Taj City Mall - Nasr City',
-        'Fustat Garden Pumps',
-        'Administrative Building - Kinda - Taj City',
-        'Public Service Building - New Valley',
-        'Court Complex Pumps - New Valley',
-        'Residential Towers - New Administrative Capital',
-        'Basements and Residential Towers - Nasr City',
-        'National Bank - Maadi',
-        'Residential Towers - Fifth Settlement',
-        'Residential Towers - El Alamein'
+        'Dog Life AI - Smart Pet Monitoring',
+        'LMENUS - Digital Menu Ecosystem',
+        'NutriFit - AI Personal Trainer',
+        'My Clinic System - Healthcare Management',
+        'Stripe & iOS Payment Integration modules',
+        'Customized LLM Analysis Tools'
       ],
       projectDetails: {
         projectDetail: 'Project Detail',
         projectInfo: 'Project Info',
-        location: 'Location',
-        scopeOfWork: 'Scope of Work',
+        location: 'Platform',
+        scopeOfWork: 'Description',
         client: 'Client',
         category: 'Category',
         date: 'Date',
         haveQuestion: 'Have Question ? Get in touch!',
         contactUs: 'Contact us',
-        mostakbalMasr: {
-          name: 'Mostakbal Massr, Dabaa, Egypt',
-          location: 'Mostakbal Massr, Dabaa, Egypt',
-          scope1: {
-            title: 'Site Networks',
-            items: [
-              'SEWAGE NETWORK AND MANHOLES',
-              'WATER NETWORK',
-              'IRRIGATION NETWORK',
-              'FIRE FIGHTING NETWORK',
-              'ALL VALVE CHAMBER'
-            ]
-          },
-          scope2: {
-            title: 'Building Firefighting Works',
-            description: 'Supply, install, commissioning, start-up and operation all building firefighting works.'
-          },
-          scope3: {
-            title: 'Hotel Building - Firefighting Works',
-            description: 'Supply, install, commissioning, start-up and operation all building firefighting works.'
-          }
+        dogLifeAI: {
+          name: 'Dog Life AI',
+          location: 'Mobile & Web Application',
+          scopeOfWork: 'An AI pet care platform that analyzes barks and monitors health using LLM technology. The system provides deep insights into pet behavior and health patterns through advanced machine learning algorithms.'
         },
-        monorailGarage: {
-          name: 'Monorail Garage, Cairo, Egypt',
-          location: 'Monorail Garage, Cairo, Egypt',
-          scopeOfWork: 'Supply, install, commissioning, start-up and operation of fire alarm and firefighting works in the site.'
+        lmenus: {
+          name: 'LMENUS',
+          location: 'Web & Mobile Application',
+          scopeOfWork: 'A digital menu and management system for restaurants, eliminating paper costs and enabling online ordering. Features cloud-based ordering, real-time menu updates, and comprehensive restaurant management tools.'
         },
-        administration90th: {
-          name: 'Administration building, 90th Street Fifth Settlement, Egypt',
-          location: 'Administration building, 90th Street Fifth Settlement, Egypt',
-          scopeOfWork: 'Supply, install, commissioning, start-up and operation of Aerosol system including fire alarm system.'
+        nutriFit: {
+          name: 'NutriFit',
+          location: 'Mobile Application',
+          scopeOfWork: 'An AI personal coach providing personalized workout and nutrition plans based on user data. The platform uses intelligent algorithms to create customized fitness experiences tailored to individual goals and preferences.'
         },
-        newAdminCapital: {
-          name: 'New Administrative Capital, Egypt',
-          location: 'New Administrative Capital, Egypt',
-          scopeOfWork: 'Supply, install, commissioning, start-up and operation of firefighting works in the site layout with total piping length 5000 m. all pipes from HDPE PN 16. The project was consisting of 48 dry fire hydrant (3-way).'
-        },
-        newDamietta: {
-          name: 'New Damietta, Egypt',
-          location: 'New Damietta, Egypt',
-          scopeOfWork: 'Supply, install, commissioning, start-up and operation of all infrastructure works (Sewage, Irrigation and Firefighting) in the site layout with total piping length 2150 m. firefighting pipes from HDPE PN 16. Sewage pipes from UPVC PN 10. The project was consisting of 79 sewage manhole and 15 catch basins.'
-        },
-        newAdminCapitalPumps: {
-          name: 'New Administrative Capital, Egypt',
-          location: 'New Administrative Capital, Egypt',
-          scopeOfWork: 'Supply, install, commissioning, start-up and operation of 5 set of booster pumps and 11 set of submersible pumps.'
+        myClinicSystem: {
+          name: 'My Clinic System (سيستم عيادتي)',
+          location: 'Web & Mobile Application',
+          scopeOfWork: 'A comprehensive management tool for doctors to handle bookings, patient archives, and financial reports. The system streamlines clinic operations with secure patient data management and automated scheduling.'
         }
       }
     },
@@ -208,14 +178,14 @@ const translations = {
     contact: {
       contactUs: 'Contact us',
       title: 'Get In Touch !',
-      description: 'Get in touch with Elsharque. We\'re here to help you with your projects and answer any questions you may have.',
+      description: 'Get in touch with ProCode Solutions. We\'re here to help you with your projects and answer any questions you may have.',
       phone: 'Phone',
       email: 'Email',
       location: 'Location',
       whatsapp: 'Chat on WhatsApp'
     },
     footer: {
-      copyright: 'ELSHARQUE FOR General Contracting and Maintenance. All rights reserved.'
+      copyright: 'ProCode Solutions. All rights reserved.'
     },
     clients: {
       title: 'Our Clients',
@@ -225,7 +195,7 @@ const translations = {
     suppliersForm: {
       title: 'Supplier Registration',
       subtitle: 'Join our network of trusted suppliers',
-      description: 'Fill out the form below to register your company as a potential supplier for ELSHARQUE.',
+      description: 'Fill out the form below to register your company as a potential supplier for ProCode Solutions.',
       companyName: 'Company Name',
       commercialRegister: 'Commercial Register Number',
       employeeName: 'Responsible Employee Name',
@@ -255,173 +225,143 @@ const translations = {
         chairmanWord: 'كلمة رئيس مجلس الإدارة'
       },
       servicesMenu: {
-        electrical: 'الأنظمة الكهربائية',
-        mechanical: 'الأنظمة الميكانيكية',
-        building: 'البناء والتشطيبات',
-        infrastructure: 'البنية التحتية والمناظر الطبيعية',
-        mepDesign: 'تصميم MEP وجداول الكميات',
-        bim: 'نمذجة BIM ثلاثية الأبعاد'
+        aiLLM: 'تكامل الذكاء الاصطناعي ونماذج اللغة الكبيرة',
+        digitalTransformation: 'التحول الرقمي',
+        appDevelopment: 'تطوير التطبيقات المخصصة',
+        healthcare: 'إدارة الرعاية الصحية',
+        aiCoaching: 'منصات التدريب بالذكاء الاصطناعي',
+        ecommerce: 'التجارة الإلكترونية والمدفوعات'
       }
     },
     hero: {
-      title: 'مرحباً بكم في الشرق',
-      subtitle: 'الريادة في الميكانيكا والكهرباء',
-      description: 'نحن واحدة من أبرز الشركات الرائدة في قطاع المقاولات والصيانة للميكانيكا والكهرباء. لقد نجحنا في تنفيذ مشاريع كبرى في السوق المصري.',
-      typewriterWords: ['المقاولات', 'الصيانة', 'البناء', 'الحلول']
+      title: 'ProCode Solutions: إعادة تعريف المستقبل من خلال الكود الذكي.',
+      subtitle: 'نحن لا نبني البرمجيات فحسب؛ بل نخلق أنظمة مدعومة بالذكاء الاصطناعي تحول الأعمال.',
+      description: 'من رعاية الحيوانات الأليفة بالذكاء الاصطناعي إلى إدارة العيادات الذكية، نحقق رؤيتك.',
+      typewriterWords: ['حلول الذكاء الاصطناعي', 'التحول الرقمي', 'أنظمة الرعاية الصحية', 'تطوير التطبيقات']
     },
     about: {
       whoWeAre: 'من نحن ؟',
-      title: 'الشرق للمقاولات العامة والصيانة',
-      description: 'نحن واحدة من أبرز الشركات الرائدة في قطاع المقاولات والصيانة للميكانيكا والكهرباء. لقد نجحنا في تنفيذ مشاريع كبرى في السوق المصري، مدعومين بمحفظة قوية، وقوة عاملة استثنائية، وخدمة ما بعد البيع المتميزة.',
+      title: 'ProCode Solutions',
+      description: 'نحن شركة تقنية متقدمة متخصصة في البرمجيات المدمجة بالذكاء الاصطناعي والتحول الرقمي. نؤمن أن التكنولوجيا يجب أن تفعل أكثر من مجرد العمل—يجب أن تغير الحياة للأفضل.',
       visionTitle: 'الرؤية',
-      vision: 'رؤيتنا هي أن نبقى دائماً واحدة من الشركات الوطنية التي تدعم تقدم التنمية المستدامة في مجال البناء والتشييد.',
+      vision: 'أن نكون رائداً عالمياً في الابتكار المدعوم بالذكاء الاصطناعي، وتمكين الشركات من الوصول إلى إمكاناتها الكاملة من خلال الأتمتة الذكية.',
       missionTitle: 'الرسالة',
-      mission: 'المساعدة في تطوير وبناء المشاريع الاستراتيجية واللوجستية والتعليمية والسكنية والتجارية من خلال تجنيد وتدريب قوة عاملة عالية المهارة ومؤهلة، مما يساعد على تقليل البطالة في المجتمع المصري.',
+      mission: 'تقديم حلول رقمية عالية الجودة وقابلة للتطوير (موبايل، ويب، ذكاء اصطناعي) تحل المشاكل الحقيقية وتربط بين التكنولوجيا والحياة اليومية.',
       chairmanWord: {
         title: 'كلمة رئيس مجلس الإدارة',
         greeting: 'أعزائي أصحاب المصلحة الكرام،',
         paragraph1: 'بصفتي رئيس مجلس إدارة منظمتنا الموقرة، يسعدني أن أتحدث إليكم. أنا ممتن بعمق للثقة التي أوليتمونا إياها، مما مكننا من خدمتكم والمساهمة في ازدهاركم.',
         paragraph2: 'رؤيتنا القوية ومهمتنا المحددة بوضوح تشكلان الأساس لعملياتنا. نحن نبتكر باستمرار لتجاوز التوقعات وتلبية احتياجات عملائنا المتطورة.',
-        paragraph3: 'في شركة الشرق، نؤمن بأن النجاح يُبنى على الالتزام الثابت والنزاهة والتميز. فريقنا الاستثنائي، إلى جانب التكنولوجيا المتطورة، يقدم مشاريع بجودة استثنائية، في الوقت المحدد وفي حدود الميزانية.',
-        paragraph4: 'نحن نعتز بعلاقاتنا مع العملاء والشركاء وأصحاب المصلحة، ملتزمون برعاية هذه الروابط لسنوات قادمة. دعمكم يلهمنا لرفع المعايير إلى مستوى أعلى.',
-        paragraph5: 'شكراً لكم على دعمكم المستمر وثقتكم في شركة الشرق. معاً، دعونا نواصل بناء مستقبل مدعوم بالابتكار والموثوقية والتميز.',
+        paragraph3: 'في ProCode Solutions، نؤمن بأن النجاح يُبنى على الالتزام الثابت والنزاهة والتميز. فريقنا الاستثنائي، إلى جانب تكنولوجيا الذكاء الاصطناعي المتطورة، يقدم حلولاً بجودة استثنائية تحول الأعمال.',
+        paragraph4: 'نحن نعتز بعلاقاتنا مع العملاء والشركاء وأصحاب المصلحة، ملتزمون برعاية هذه الروابط لسنوات قادمة. دعمكم يلهمنا لرفع المعايير إلى مستوى أعلى في الابتكار المدعوم بالذكاء الاصطناعي.',
+        paragraph5: 'شكراً لكم على دعمكم المستمر وثقتكم في ProCode Solutions. معاً، دعونا نواصل بناء مستقبل مدعوم بالكود الذكي والابتكار والتميز.',
         closing: 'مع أطيب التحيات،',
-        ceoName: 'م.د / أحمد خالد',
-        ceoTitle: 'رئيس مجلس الإدارة',
-        ceoSubtitle: 'مدرس بكلية الهندسة، جامعة المنوفية'
+        // ceoName: 'م.د / أحمد خالد',
+        // ceoTitle: 'رئيس مجلس الإدارة',
+        // ceoSubtitle: 'مدرس بكلية الهندسة، جامعة المنوفية'
       }
     },
     services: {
       whatWeDo: 'ماذا نفعل ؟',
       title: 'الحل المثالي لعملك',
-      description: 'تقدم الشرق حلولاً شاملة مصممة خصيصاً لتلبية احتياجات عملك وتحقيق النجاح.',
+      description: 'تقدم ProCode Solutions حلولاً شاملة مدعومة بالذكاء الاصطناعي مصممة خصيصاً لتلبية احتياجات عملك وتحقيق التحول الرقمي.',
       readMore: 'اقرأ المزيد',
       workProcess: 'عملية العمل',
-      digitalSystem: 'النظام الرقمي لأعمالنا',
-      digitalSystemDesc: 'تم تصميم أنظمتنا وعملياتنا الرقمية لتبسيط عمليات عملك وتعظيم الكفاءة.',
-      electricalSystems: {
-        name: 'الأنظمة الكهربائية',
-        desc: 'توريد وتركيب وتشغيل وبدء التشغيل والتشغيل والصيانة لجميع الأنظمة الكهربائية (الطاقة والتيار الضعيف).'
+      digitalSystem: 'الأنظمة الرقمية',
+      digitalSystemDesc: 'تم تصميم أنظمتنا وعملياتنا الرقمية لتبسيط عمليات عملك وتعظيم الكفاءة من خلال الأتمتة المدعومة بالذكاء الاصطناعي.',
+      aiLLMIntegration: {
+        name: 'تكامل الذكاء الاصطناعي ونماذج اللغة الكبيرة',
+        desc: 'بناء أنظمة ذكية مثل Dog Life AI التي تستخدم نماذج اللغة الكبيرة لتحليل السلوك وتقديم رؤى عميقة.',
+        fullDescription: 'بناء أنظمة ذكية مثل Dog Life AI التي تستخدم نماذج اللغة الكبيرة لتحليل السلوك وتقديم رؤى عميقة. نستفيد من تكنولوجيا الذكاء الاصطناعي المتطورة لإنشاء حلول ذكية تفهم السياق وتتعلم من البيانات وتقدم رؤى قابلة للتنفيذ للشركات في مختلف الصناعات.'
       },
-      mechanicalSystems: {
-        name: 'الأنظمة الميكانيكية',
-        desc: 'توريد وتركيب وتشغيل وبدء التشغيل والتشغيل والصيانة لجميع الأنظمة الميكانيكية (التكييف، مكافحة الحرائق، السباكة والغاز الطبي).'
+      digitalTransformation: {
+        name: 'التحول الرقمي (LMENUS)',
+        desc: 'رقمنة الأعمال التقليدية مثل المطاعم مع أنظمة الطلب والإدارة المستندة إلى السحابة.',
+        fullDescription: 'رقمنة الأعمال التقليدية مثل المطاعم مع أنظمة الطلب والإدارة المستندة إلى السحابة. نحول العمليات القديمة إلى أنظمة رقمية حديثة وفعالة تبسط العمليات وتقلل التكاليف وتعزز تجارب العملاء من خلال حلول مبتكرة مستندة إلى السحابة.'
       },
-      buildingConstruction: {
-        name: 'بناء المباني',
-        desc: 'بناء المباني والتشطيبات الداخلية مع الالتزام بالجودة ورضا العملاء.'
+      customAppDevelopment: {
+        name: 'تطوير التطبيقات المخصصة',
+        desc: 'تطوير تطبيقات iOS و Android عالية الأداء مع تكاملات دفع آمنة مثل Stripe.',
+        fullDescription: 'تطوير تطبيقات iOS و Android عالية الأداء مع تكاملات دفع آمنة مثل Stripe. تطبيقاتنا المحمولة مبنية مع مراعاة قابلية التوسع والأمان وتجربة المستخدم، وتتميز بمعالجة دفع سلسة وبنية تحتية خلفية قوية.'
       },
-      infrastructureLandscaping: {
-        name: 'البنية التحتية والمسطحات الخضراء',
-        desc: 'تتخصص شركتنا في شبكات البنية التحتية والمسطحات الخضراء، وتقديم حلول شاملة بخبرة وابتكار.',
-        fullDescription: 'تتخصص شركتنا في شبكات البنية التحتية والمسطحات الخضراء، وتقديم حلول شاملة بخبرة وابتكار.\n\nالشرق هي متخصص رائد في تصميم وتنفيذ أنظمة السباكة الفعالة والموثوقة. تشمل خبرتنا مجموعة واسعة من الخدمات، بما في ذلك: شبكة إمداد المياه المنزلية (بما في ذلك المضخات، شبكة الأنابيب، السخانات، التركيبات)، نظام الصرف (المضخات الغاطسة، شبكات الأنابيب، التركيبات، غرف التفتيش، فتحات التفتيش، نقاط الصرف، إلخ)، المسابح والميزات المائية.'
+      healthcareManagement: {
+        name: 'إدارة الرعاية الصحية',
+        desc: 'تقديم أنظمة متخصصة مثل My Clinic System لإدارة بيانات المرضى والجدولة والسجلات الطبية.',
+        fullDescription: 'تقديم أنظمة متخصصة مثل My Clinic System لإدارة بيانات المرضى والجدولة والسجلات الطبية. حلول الرعاية الصحية لدينا تضمن الامتثال لـ HIPAA وإدارة آمنة للبيانات وسير عمل مبسط للمهنيين الطبيين.'
       },
-      mepDesignBOQ: {
-        name: 'تصميم الميكانيكا والكهرباء وقائمة الكميات',
-        desc: 'إعداد جميع تصميمات الميكانيكا والكهرباء والمواصفات وقوائم الكميات بخبرة مهنية واهتمام بالتفاصيل.'
+      aiCoachingPlatforms: {
+        name: 'منصات التدريب بالذكاء الاصطناعي',
+        desc: 'إنشاء تجارب لياقة وتغذية مخصصة مدعومة بخوارزميات ذكية.',
+        fullDescription: 'إنشاء تجارب لياقة وتغذية مخصصة مدعومة بخوارزميات ذكية. منصات التدريب بالذكاء الاصطناعي لدينا تحلل بيانات المستخدم لتقديم خطط تمرين مخصصة وتوصيات غذائية وتتبع التقدم للحصول على نتائج صحية مثالية.'
       },
-      bim3DModeling: {
-        name: 'النمذجة ثلاثية الأبعاد BIM',
-        desc: 'إعداد جميع نماذج BIM ثلاثية الأبعاد من LOD 100 حتى LOD 500 لتصور وتخطيط شامل للمشروع.'
+      ecommercePayments: {
+        name: 'التجارة الإلكترونية والمدفوعات',
+        desc: 'تنفيذ تكاملات مالية قوية وأنظمة شراء داخل التطبيق للأسواق العالمية.',
+        fullDescription: 'تنفيذ تكاملات مالية قوية وأنظمة شراء داخل التطبيق للأسواق العالمية. ندمج بوابات دفع آمنة وندير المعاملات عبر عملات متعددة ونتأكد من الامتثال للوائح المالية الدولية.'
       },
-      electricalLightCurrent: {
-        name: 'الأنظمة الكهربائية والتيار الضعيف',
-        desc: 'الشرق هي مزود رائد للأنظمة الكهربائية والتيار الضعيف، وتقدم حلولاً متطورة لمجموعة واسعة من التطبيقات. تشمل خبرتنا تصميم وتركيب وصيانة أنظمة توزيع الطاقة، وحلول الإضاءة، والأنظمة المتقدمة للتيار الضعيف مثل إنذار الحريق، والكاميرات، والتحكم في الوصول، وشبكات البيانات.',
-        fullDescription: 'الشرق هي مزود رائد للأنظمة الكهربائية والتيار الضعيف، وتقدم حلولاً متطورة لمجموعة واسعة من التطبيقات. تشمل خبرتنا تصميم وتركيب وصيانة أنظمة توزيع الطاقة، وحلول الإضاءة، والأنظمة المتقدمة للتيار الضعيف مثل إنذار الحريق، والكاميرات، والتحكم في الوصول، وشبكات البيانات. مع التركيز على الابتكار والسلامة والكفاءة، نقدم حلولاً مخصصة تلبي المتطلبات الفريدة للمشاريع السكنية والتجارية والصناعية.'
+      aiAnalysis: {
+        name: 'تحليل الذكاء الاصطناعي وعلوم البيانات',
+        desc: 'نستخدم الذكاء الاصطناعي المتقدم لمعالجة البيانات، سواء كان ذلك سلوك الحيوانات الأليفة أو تتبع اللياقة البدنية.',
+        fullDescription: 'نستخدم الذكاء الاصطناعي المتقدم لمعالجة البيانات، سواء كان ذلك سلوك الحيوانات الأليفة أو تتبع اللياقة البدنية. فريق علوم البيانات لدينا يستخدم خوارزميات التعلم الآلي لاستخراج أنماط ذات معنى والتنبؤ بالاتجاهات وتقديم رؤى قابلة للتنفيذ من مجموعات البيانات المعقدة.'
       },
-      hvacFirefighting: {
-        name: 'أنظمة التكييف ومكافحة الحرائق',
-        desc: 'شركة الشرق هي مزود رائد لحلول التكييف الشاملة، متخصصة في تصميم وتركيب وصيانة أنظمة التحكم في المناخ المتقدمة. نحن أيضاً قائد موثوق في تصميم وتركيب وصيانة أنظمة مكافحة الحرائق المتقدمة، وتقديم حلول شاملة مصممة خصيصاً لتلبية أعلى معايير السلامة.',
-        fullDescription: 'شركة الشرق هي مزود رائد لحلول التكييف الشاملة، متخصصة في تصميم وتركيب وصيانة أنظمة التحكم في المناخ المتقدمة. تمتد خبرتنا عبر مجموعة واسعة من التقنيات، بما في ذلك: وحدات DX المنفصلة، أنظمة المياه المبردة، أنظمة VRV/VRF، التحكم في الدخان، أنظمة التهوية، نظام ETS.\n\nالشرق هي قائد موثوق في تصميم وتركيب وصيانة أنظمة مكافحة الحرائق المتقدمة. نتخصص في تقديم حلول شاملة مصممة خصيصاً لتلبية أعلى معايير السلامة، بما في ذلك الأنظمة القائمة على الماء مثل الرشاشات وخزانات خراطيم الحريق، وأنظمة العوامل النظيفة مثل: FM200 و CO2، رذاذ الماء، أنظمة الرغوة، نظام رشاشات الماء، نظام الهباء الجوي.'
+      cloudDashboards: {
+        name: 'لوحات المعلومات السحابية في الوقت الفعلي',
+        desc: 'نوفر للمديرين سيطرة كاملة على أعمالهم، من تسعير القوائم إلى التقارير المالية السريرية.',
+        fullDescription: 'نوفر للمديرين سيطرة كاملة على أعمالهم، من تسعير القوائم إلى التقارير المالية السريرية. لوحات المعلومات المستندة إلى السحابة لدينا تقدم تحليلات في الوقت الفعلي وإعداد تقارير قابلة للتخصيص وواجهات بديهية لإدارة الأعمال الشاملة.'
       },
-      plumbingInfrastructure: {
-        name: 'السباكة والبنية التحتية',
-        desc: 'الشرق هي متخصص رائد في تصميم وتنفيذ أنظمة السباكة الفعالة والموثوقة. تشمل خبرتنا شبكات إمداد المياه المنزلية، وأنظمة الصرف، والمسابح، والنوافير. كما نتخصص في شبكات البنية التحتية والمسطحات الخضراء، وتقديم حلول شاملة بخبرة وابتكار.'
+      paymentGateways: {
+        name: 'بوابات الدفع الآمنة',
+        desc: 'تكامل Stripe والشراء داخل التطبيق لضمان معاملات عالمية سلسة.',
+        fullDescription: 'تكامل Stripe والشراء داخل التطبيق لضمان معاملات عالمية سلسة. ننفذ أنظمة معالجة دفع آمنة ومتوافقة مع PCI تدعم طرق دفع متعددة وعملات وتوفر حماية من الاحتيال للشركات في جميع أنحاء العالم.'
       }
     },
     portfolio: {
       title: 'المشاريع',
-      subtitle: 'أعمال ومشاريع الشرق',
-      description: 'استكشف محفظة مشاريعنا الناجحة وشاهد كيف تقدم الشرق التميز في كل مسعى.',
+      subtitle: 'محفظتنا',
+      description: 'استكشف محفظة مشاريعنا الناجحة وشاهد كيف تقدم ProCode Solutions التميز في الابتكار المدعوم بالذكاء الاصطناعي.',
       viewPortfolio: 'عرض المشاريع',
-      readyToStart: 'هل أنت مستعد لبدء مشروعك القادم مع الشرق؟',
-      contactToday: 'اتصل بنا اليوم ودع الشرق تساعدك في تحقيق أهدافك بخبرتنا وحلولنا المبتكرة.',
+      readyToStart: 'هل أنت مستعد لبدء مشروعك القادم مع ProCode Solutions؟',
+      contactToday: 'اتصل بنا اليوم ودع ProCode Solutions تساعدك في تحقيق أهدافك بخبرتنا وحلول الذكاء الاصطناعي المبتكرة.',
       projectName: 'مشروع',
       projectCategory: 'فئة',
       previousProjects: 'المشاريع السابقة',
       projects: [
-        'مصنع البصل – الضبعة – جهاز مستقبل مصر',
-        'جراج الأندلس (جراج المونوريل) – التجمع الخامس – شركة وطنية',
-        'مبنى إداري شارع التسعين – التجمع الخامس – شركة وطنية',
-        'شبكات كهروميكانيك إدارة جهاز مستقبل مصر – الضبعة – جهاز مستقبل مصر',
-        'فندق الضباط – الضبعة – جهاز مستقبل مصر',
-        'مول تاج سيتي – مدينة نصر',
-        'طلمبات حديقة الفسطاط',
-        'مبنى إداري – كيندا – تاج سيتي',
-        'مبنى التعامل مع الجمهور – الوادي الجديد',
-        'طلمبات مجمع المحاكم – الوادي الجديد',
-        'أبراج سكنية – العاصمة الإدارية',
-        'بدرومات وأبراج سكنية – مدينة نصر',
-        'البنك الأهلي – المعادي',
-        'أبراج سكنية – التجمع الخامس',
-        'أبراج سكنية – العلمين'
+        'Dog Life AI - مراقبة الحيوانات الأليفة الذكية',
+        'LMENUS - نظام القوائم الرقمية',
+        'NutriFit - مدرب شخصي بالذكاء الاصطناعي',
+        'My Clinic System - إدارة الرعاية الصحية',
+        'وحدات تكامل Stripe و iOS للدفع',
+        'أدوات تحليل LLM مخصصة'
       ],
       projectDetails: {
         projectDetail: 'تفاصيل المشروع',
         projectInfo: 'معلومات المشروع',
-        location: 'الموقع',
-        scopeOfWork: 'نطاق العمل',
+        location: 'المنصة',
+        scopeOfWork: 'الوصف',
         client: 'العميل',
         category: 'الفئة',
         date: 'التاريخ',
         haveQuestion: 'هل لديك سؤال؟ تواصل معنا!',
         contactUs: 'اتصل بنا',
-        mostakbalMasr: {
-          name: 'مستقبل مصر، الضبعة، مصر',
-          location: 'مستقبل مصر، الضبعة، مصر',
-          scope1: {
-            title: 'شبكات الموقع',
-            items: [
-              'شبكة الصرف الصحي والفتحات',
-              'شبكة المياه',
-              'شبكة الري',
-              'شبكة مكافحة الحرائق',
-              'جميع غرف الصمامات'
-            ]
-          },
-          scope2: {
-            title: 'أعمال مكافحة الحرائق للمباني',
-            description: 'توريد وتركيب وتشغيل وبدء التشغيل والتشغيل لجميع أعمال مكافحة الحرائق للمباني.'
-          },
-          scope3: {
-            title: 'مبنى الفندق - أعمال مكافحة الحرائق',
-            description: 'توريد وتركيب وتشغيل وبدء التشغيل والتشغيل لجميع أعمال مكافحة الحرائق للمباني.'
-          }
+        dogLifeAI: {
+          name: 'Dog Life AI',
+          location: 'تطبيق موبايل ويب',
+          scopeOfWork: 'منصة رعاية حيوانات أليفة بالذكاء الاصطناعي تحلل النباح وتراقب الصحة باستخدام تكنولوجيا LLM. يوفر النظام رؤى عميقة حول سلوك وصحة الحيوانات الأليفة من خلال خوارزميات التعلم الآلي المتقدمة.'
         },
-        monorailGarage: {
-          name: 'جراج المونوريل، القاهرة، مصر',
-          location: 'جراج المونوريل، القاهرة، مصر',
-          scopeOfWork: 'توريد وتركيب وتشغيل وبدء التشغيل والتشغيل لأعمال إنذار الحريق ومكافحة الحرائق في الموقع.'
+        lmenus: {
+          name: 'LMENUS',
+          location: 'تطبيق ويب وموبايل',
+          scopeOfWork: 'نظام قوائم وإدارة رقمي للمطاعم، يلغي تكاليف الورق ويمكن الطلب عبر الإنترنت. يتميز بالطلب المستند إلى السحابة وتحديثات القوائم في الوقت الفعلي وأدوات إدارة المطاعم الشاملة.'
         },
-        administration90th: {
-          name: 'مبنى إداري، شارع التسعين، التجمع الخامس، مصر',
-          location: 'مبنى إداري، شارع التسعين، التجمع الخامس، مصر',
-          scopeOfWork: 'توريد وتركيب وتشغيل وبدء التشغيل والتشغيل لنظام الهباء الجوي بما في ذلك نظام إنذار الحريق.'
+        nutriFit: {
+          name: 'NutriFit',
+          location: 'تطبيق موبايل',
+          scopeOfWork: 'مدرب شخصي بالذكاء الاصطناعي يقدم خطط تمرين وتغذية مخصصة بناءً على بيانات المستخدم. تستخدم المنصة خوارزميات ذكية لإنشاء تجارب لياقة مخصصة مصممة خصيصاً للأهداف والتفضيلات الفردية.'
         },
-        newAdminCapital: {
-          name: 'العاصمة الإدارية الجديدة، مصر',
-          location: 'العاصمة الإدارية الجديدة، مصر',
-          scopeOfWork: 'توريد وتركيب وتشغيل وبدء التشغيل والتشغيل لأعمال مكافحة الحرائق في تخطيط الموقع بطول إجمالي للأنابيب 5000 متر. جميع الأنابيب من HDPE PN 16. يتكون المشروع من 48 صنبور حريق جاف (3 اتجاهات).'
-        },
-        newDamietta: {
-          name: 'دمياط الجديدة، مصر',
-          location: 'دمياط الجديدة، مصر',
-          scopeOfWork: 'توريد وتركيب وتشغيل وبدء التشغيل والتشغيل لجميع أعمال البنية التحتية (الصرف الصحي والري ومكافحة الحرائق) في تخطيط الموقع بطول إجمالي للأنابيب 2150 متر. أنابيب مكافحة الحرائق من HDPE PN 16. أنابيب الصرف الصحي من UPVC PN 10. يتكون المشروع من 79 فتحة صرف صحي و 15 حوض تجميع.'
-        },
-        newAdminCapitalPumps: {
-          name: 'العاصمة الإدارية الجديدة، مصر',
-          location: 'العاصمة الإدارية الجديدة، مصر',
-          scopeOfWork: 'توريد وتركيب وتشغيل وبدء التشغيل والتشغيل لـ 5 مجموعات من المضخات المعززة و 11 مجموعة من المضخات الغاطسة.'
+        myClinicSystem: {
+          name: 'My Clinic System (سيستم عيادتي)',
+          location: 'تطبيق ويب وموبايل',
+          scopeOfWork: 'أداة إدارة شاملة للأطباء للتعامل مع الحجوزات وأرشيفات المرضى والتقارير المالية. يبسط النظام عمليات العيادة مع إدارة آمنة لبيانات المرضى والجدولة الآلية.'
         }
       }
     },
@@ -438,14 +378,14 @@ const translations = {
     contact: {
       contactUs: 'اتصل بنا',
       title: 'تواصل معنا !',
-      description: 'تواصل مع الشرق. نحن هنا لمساعدتك في مشاريعك والإجابة على أي أسئلة قد تكون لديك.',
+      description: 'تواصل مع ProCode Solutions. نحن هنا لمساعدتك في مشاريعك والإجابة على أي أسئلة قد تكون لديك.',
       phone: 'الهاتف',
       email: 'البريد الإلكتروني',
       location: 'الموقع',
       whatsapp: 'تواصل عبر واتساب'
     },
     footer: {
-      copyright: 'الشرق للمقاولات العامة والصيانة. جميع الحقوق محفوظة.'
+      copyright: 'ProCode Solutions. جميع الحقوق محفوظة.'
     },
     clients: {
       title: 'عملاؤنا',
@@ -455,7 +395,7 @@ const translations = {
     suppliersForm: {
       title: 'تسجيل الموردين',
       subtitle: 'انضم إلى شبكة موردينا المعتمدين',
-      description: 'يرجى ملء النموذج أدناه لتسجيل شركتكم كمورد محتمل لشركة الشرق.',
+      description: 'يرجى ملء النموذج أدناه لتسجيل شركتكم كمورد محتمل لـ ProCode Solutions.',
       companyName: 'اسم الشركة',
       commercialRegister: 'رقم السجل التجارى',
       employeeName: 'اسم الموظف المسئول',

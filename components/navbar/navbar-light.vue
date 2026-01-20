@@ -2,8 +2,8 @@
         <nav class="navbar" id="navbar" @scroll="handleScroll">
             <div class="container-fluid px-4 md:px-10 flex lg_992:flex-nowrap flex-wrap items-center justify-between">
                 <NuxtLink class="navbar-brand flex items-center flex-shrink-0" to="/">
-                    <img :src="logoImg" class="h-24 md:h-28 dark:hidden" alt="ELSHARQUE">
-                    <img :src="logoImg" class="h-24 md:h-28 hidden dark:inline-block" alt="ELSHARQUE">
+                    <img :src="logoImg" class="h-24 md:h-28 dark:hidden" alt="ProCode Solutions">
+                    <img :src="logoImg" class="h-24 md:h-28 hidden dark:inline-block" alt="ProCode Solutions">
                 </NuxtLink>
 
                 <div class="nav-icons flex items-center lg_992:order-2">
@@ -11,19 +11,19 @@
                     <ul class="list-none menu-social mb-0 space-x-1">
                         <li class="inline">
                             <a href="#" target="_blank">
-                                <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i class="uil uil-facebook-f"></i></span></span>
+                                <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-blue-800 hover:bg-blue-900 border-blue-800 hover:border-blue-900 text-white"><i class="uil uil-facebook-f"></i></span></span>
                                 <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-facebook-f"></i></span></span>
                             </a>
                         </li>
                         <li class="inline">
                             <a :href="`https://wa.me/${whatsappNumber}`" target="_blank">
-                                <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i class="uil uil-whatsapp"></i></span></span>
+                                <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-blue-800 hover:bg-blue-900 border-blue-800 hover:border-blue-900 text-white"><i class="uil uil-whatsapp"></i></span></span>
                                 <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-whatsapp"></i></span></span>
                             </a>
                         </li>
                         <li class="inline">
                             <a href="#" target="_blank">
-                                <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i class="uil uil-linkedin"></i></span></span>
+                                <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-blue-800 hover:bg-blue-900 border-blue-800 hover:border-blue-900 text-white"><i class="uil uil-linkedin"></i></span></span>
                                 <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-linkedin"></i></span></span>
                             </a>
                         </li>
@@ -52,12 +52,12 @@
                         <li class="nav-item features dropdown-item" @mouseenter="showServicesDropdown = true" @mouseleave="showServicesDropdown = false">
                             <a class="nav-link" href="#features" @click="closeMobileMenu">{{ t('nav.services') }} <i class="mdi mdi-chevron-down"></i></a>
                             <ul class="dropdown-menu hidden lg_992:block" :class="{ 'show': showServicesDropdown }">
-                                <li><a @click.prevent="openServiceDialog('electrical')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.electrical') }}</a></li>
-                                <li><a @click.prevent="openServiceDialog('mechanical')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.mechanical') }}</a></li>
-                                <li><a @click.prevent="openServiceDialog('building')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.building') }}</a></li>
-                                <li><a @click.prevent="openServiceDialog('infrastructure')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.infrastructure') }}</a></li>
-                                <li><a @click.prevent="openServiceDialog('mepDesign')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.mepDesign') }}</a></li>
-                                <li><a @click.prevent="openServiceDialog('bim')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.bim') }}</a></li>
+                                <li><a @click.prevent="openServiceDialog('aiLLM')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.aiLLM') }}</a></li>
+                                <li><a @click.prevent="openServiceDialog('digitalTransformation')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.digitalTransformation') }}</a></li>
+                                <li><a @click.prevent="openServiceDialog('appDevelopment')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.appDevelopment') }}</a></li>
+                                <li><a @click.prevent="openServiceDialog('healthcare')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.healthcare') }}</a></li>
+                                <li><a @click.prevent="openServiceDialog('aiCoaching')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.aiCoaching') }}</a></li>
+                                <li><a @click.prevent="openServiceDialog('ecommerce')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.ecommerce') }}</a></li>
                             </ul>
                         </li>
                         <li class="nav-item portfolio">
@@ -69,9 +69,9 @@
                         <li class="nav-item blog">
                             <a class="nav-link" href="#blog" @click="closeMobileMenu">{{ t('nav.blog') }}</a>
                         </li>
-                        <li class="nav-item suppliers">
+                        <!-- <li class="nav-item suppliers">
                             <a class="nav-link" href="#suppliers" @click="closeMobileMenu">{{ t('nav.suppliers') }}</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item contact">
                             <a class="nav-link" href="#contact" @click="closeMobileMenu">{{ t('nav.contact') }}</a>
                         </li>
@@ -90,7 +90,7 @@
 <script setup>
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
-import logoImg from '@/assets/images/logo (2).png'
+import logoImg from '@/assets/images/proCodeLogo.jpg'
 
 const { t, currentLang, isRTL, toggleLanguage } = useLanguage()
 const toggle = ref(false)
@@ -98,7 +98,7 @@ const sections = ref([])
 const navLi = ref([])
 const current = ref("")
 const sectionTop = ref(null)
-const whatsappNumber = '201003923040'
+const whatsappNumber = '966573092631'
 const showDropdown = ref(false)
 const showServicesDropdown = ref(false)
 
@@ -223,13 +223,13 @@ const onscroll = () => {
     }
     
     .nav-item.active .nav-link {
-        color: #064e3b !important;
-        background-color: rgba(6, 78, 59, 0.05);
+        color: #1e40af !important;
+        background-color: rgba(30, 64, 175, 0.05);
         font-weight: 600;
     }
 
     .nav-link:active {
-        background-color: rgba(6, 78, 59, 0.1);
+        background-color: rgba(30, 64, 175, 0.1);
     }
 }
 
@@ -277,7 +277,7 @@ const onscroll = () => {
 }
 
 .dropdown-link:hover {
-    background: #064e3b;
+    background: #1e40af;
     color: white;
 }
 
@@ -290,7 +290,7 @@ const onscroll = () => {
 }
 
 .dark .dropdown-link:hover {
-    background: #064e3b;
+    background: #1e40af;
     color: white;
 }
 </style>

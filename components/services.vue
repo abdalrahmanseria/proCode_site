@@ -5,7 +5,7 @@
         <div class="container lg mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 pb-8 items-center">
                 <div>
-                    <h6 class="text-emerald-600 text-base font-medium uppercase mb-2">{{ t('services.whatWeDo') }}</h6>
+                    <h6 class="text-blue-800 text-base font-medium uppercase mb-2">{{ t('services.whatWeDo') }}</h6>
                     <h3 class="mb-4 md:text-2xl text-xl font-semibold dark:text-white md:mb-0">{{ t('services.title') }}</h3>
                 </div>
 
@@ -17,19 +17,19 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6">
                 <div v-for="data in datas" :key="data.id" :class="data.class">
                     <div
-                        class="size-20 bg-emerald-600/5 text-emerald-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
+                        class="size-20 bg-blue-800/5 text-blue-800 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
                         <i :class="data.icon"></i>
                     </div>
 
                     <div class="content mt-7">
                         <a href="javascript:void(0)" @click="openServiceDialog(data.id)"
-                            class="text-lg hover:text-emerald-600 dark:text-white dark:hover:text-emerald-600 transition-all duration-500 ease-in-out font-medium">{{
+                            class="text-lg hover:text-blue-800 dark:text-white dark:hover:text-blue-800 transition-all duration-500 ease-in-out font-medium">{{
                     data.name }}</a>
                         <p class="text-slate-400 mt-3">{{ data.desc }}</p>
 
                         <div class="mt-5">
                             <a href="javascript:void(0)" @click="openServiceDialog(data.id)"
-                                class="btn btn-link hover:text-emerald-600 dark:hover:text-emerald-600 after:bg-emerald-600 dark:text-white transition duration-500 cursor-pointer">{{ t('services.readMore') }} <i class="uil uil-arrow-right"></i></a>
+                                class="btn btn-link hover:text-blue-800 dark:hover:text-blue-800 after:bg-blue-800 dark:text-white transition duration-500 cursor-pointer">{{ t('services.readMore') }} <i class="uil uil-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
 
         <div class="container md:mt-24 mt-16">
             <div class="grid grid-cols-1 pb-8 text-center">
-                <h6 class="text-emerald-600 text-base font-medium uppercase mb-2">{{ t('services.workProcess') }}</h6>
+                <h6 class="text-blue-800 text-base font-medium uppercase mb-2">{{ t('services.workProcess') }}</h6>
                 <h3 class="mb-4 md:text-2xl text-xl font-medium dark:text-white">{{ t('services.digitalSystem') }}
                 </h3>
 
@@ -49,7 +49,7 @@
             <div class="grid grid-cols-1 mt-8">
                 <div v-for="item in items" :key="item.id" class="timeline relative">
                     <div class="timeline-item">
-                        <div v-if="item.id === 'electrical'" class="grid sm:grid-cols-2">
+                        <div v-if="item.id === 'aiAnalysis'" class="grid sm:grid-cols-2">
                             <div>
                                 <div class="duration date-label-left ltr:float-right rtl:float-left md:me-7 relative">
                                     <img :src="item.image" class="size-64" alt="">
@@ -66,7 +66,7 @@
                     </div><!--end timeline item-->
 
                     <div class="timeline-item pt-4">
-                        <div v-if="item.id === 'hvac'" class="grid sm:grid-cols-2">
+                        <div v-if="item.id === 'cloudDashboards'" class="grid sm:grid-cols-2">
                             <div class="md:order-1 order-2">
                                 <div
                                     class="event event-description-left ltr:float-left rtl:float-right ltr:text-right rtl:text-left md:me-7">
@@ -83,7 +83,7 @@
                     </div><!--end timeline item-->
 
                     <div class="timeline-item  pt-4">
-                        <div v-if="item.id === 'plumbing'" class="grid sm:grid-cols-2">
+                        <div v-if="item.id === 'paymentGateways'" class="grid sm:grid-cols-2">
                             <div class="mt-4 mt-sm-0">
                                 <div class="duration date-label-left ltr:float-right rtl:float-left md:me-7 relative">
                                     <img :src="item.image" class="size-64" alt="">
@@ -216,28 +216,52 @@ const lightboxIndex = ref(0)
 const selectedService = computed(() => {
     if (!selectedServiceId.value) return null
     const lang = currentLang.value
-    if (selectedServiceId.value === 'electrical') {
+    if (selectedServiceId.value === 'aiLLM') {
         return {
-            id: 'electrical',
-            name: t('services.electricalLightCurrent.name'),
-            fullDescription: t('services.electricalLightCurrent.fullDescription'),
-            images: elecImages
+            id: 'aiLLM',
+            name: t('services.aiLLMIntegration.name'),
+            fullDescription: t('services.aiLLMIntegration.fullDescription'),
+            images: []
         }
     }
-    if (selectedServiceId.value === 'mechanical') {
+    if (selectedServiceId.value === 'digitalTransformation') {
         return {
-            id: 'mechanical',
-            name: t('services.hvacFirefighting.name'),
-            fullDescription: t('services.hvacFirefighting.fullDescription'),
-            images: hvacImages
+            id: 'digitalTransformation',
+            name: t('services.digitalTransformation.name'),
+            fullDescription: t('services.digitalTransformation.fullDescription'),
+            images: []
         }
     }
-    if (selectedServiceId.value === 'infrastructure') {
+    if (selectedServiceId.value === 'appDevelopment') {
         return {
-            id: 'infrastructure',
-            name: t('services.infrastructureLandscaping.name'),
-            fullDescription: t('services.infrastructureLandscaping.fullDescription'),
-            images: infraImages
+            id: 'appDevelopment',
+            name: t('services.customAppDevelopment.name'),
+            fullDescription: t('services.customAppDevelopment.fullDescription'),
+            images: []
+        }
+    }
+    if (selectedServiceId.value === 'healthcare') {
+        return {
+            id: 'healthcare',
+            name: t('services.healthcareManagement.name'),
+            fullDescription: t('services.healthcareManagement.fullDescription'),
+            images: []
+        }
+    }
+    if (selectedServiceId.value === 'aiCoaching') {
+        return {
+            id: 'aiCoaching',
+            name: t('services.aiCoachingPlatforms.name'),
+            fullDescription: t('services.aiCoachingPlatforms.fullDescription'),
+            images: []
+        }
+    }
+    if (selectedServiceId.value === 'ecommerce') {
+        return {
+            id: 'ecommerce',
+            name: t('services.ecommercePayments.name'),
+            fullDescription: t('services.ecommercePayments.fullDescription'),
+            images: []
         }
     }
     return null
@@ -246,11 +270,8 @@ const selectedService = computed(() => {
 const openServiceDialog = (serviceId) => {
     // Mapping for consistent IDs
     let mappedId = serviceId
-    if (serviceId === 'mepDesign') mappedId = 'electrical' // Example mapping if needed
-    if (serviceId === 'bim') mappedId = 'mechanical' // Example mapping if needed
-    if (serviceId === 'building') mappedId = 'infrastructure' // Example mapping if needed
-
-    if (mappedId === 'electrical' || mappedId === 'mechanical' || mappedId === 'infrastructure') {
+    if (serviceId === 'aiLLM' || serviceId === 'digitalTransformation' || serviceId === 'appDevelopment' || 
+        serviceId === 'healthcare' || serviceId === 'aiCoaching' || serviceId === 'ecommerce') {
         selectedServiceId.value = mappedId
         isDialogOpen.value = true
         if (process.client) {
@@ -283,45 +304,45 @@ const datas = computed(() => {
     const lang = currentLang.value
     return [
         {
-            id: 'electrical',
-            icon: 'uil uil-circuit',
-            name: t('services.electricalSystems.name'),
-            desc: t('services.electricalSystems.desc'),
+            id: 'aiLLM',
+            icon: 'uil uil-brain',
+            name: t('services.aiLLMIntegration.name'),
+            desc: t('services.aiLLMIntegration.desc'),
             class: 'features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
         },
         {
-            id: 'mechanical',
-            icon: 'uil uil-cog',
-            name: t('services.mechanicalSystems.name'),
-            desc: t('services.mechanicalSystems.desc'),
+            id: 'digitalTransformation',
+            icon: 'uil uil-cloud-computing',
+            name: t('services.digitalTransformation.name'),
+            desc: t('services.digitalTransformation.desc'),
             class: 'features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
         },
         {
-            id: 'building',
-            icon: 'uil uil-building',
-            name: t('services.buildingConstruction.name'),
-            desc: t('services.buildingConstruction.desc'),
+            id: 'appDevelopment',
+            icon: 'uil uil-mobile-android',
+            name: t('services.customAppDevelopment.name'),
+            desc: t('services.customAppDevelopment.desc'),
             class: 'features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
         },
         {
-            id: 'infrastructure',
-            icon: 'uil uil-trees',
-            name: t('services.infrastructureLandscaping.name'),
-            desc: t('services.infrastructureLandscaping.desc'),
+            id: 'healthcare',
+            icon: 'uil uil-hospital',
+            name: t('services.healthcareManagement.name'),
+            desc: t('services.healthcareManagement.desc'),
             class: 'features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
         },
         {
-            id: 'mep',
-            icon: 'uil uil-file-alt',
-            name: t('services.mepDesignBOQ.name'),
-            desc: t('services.mepDesignBOQ.desc'),
+            id: 'aiCoaching',
+            icon: 'uil uil-dumbbell',
+            name: t('services.aiCoachingPlatforms.name'),
+            desc: t('services.aiCoachingPlatforms.desc'),
             class: 'features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
         },
         {
-            id: 'bim',
-            icon: 'uil uil-cube',
-            name: t('services.bim3DModeling.name'),
-            desc: t('services.bim3DModeling.desc'),
+            id: 'ecommerce',
+            icon: 'uil uil-shopping-cart',
+            name: t('services.ecommercePayments.name'),
+            desc: t('services.ecommercePayments.desc'),
             class: 'features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8'
         },
     ]
@@ -331,22 +352,22 @@ const items = computed(() => {
     const lang = currentLang.value
     return [
         {
-            id: 'electrical',
+            id: 'aiAnalysis',
             image: image,
-            name: t('services.electricalLightCurrent.name'),
-            desc: t('services.electricalLightCurrent.desc')
+            name: t('services.aiAnalysis.name'),
+            desc: t('services.aiAnalysis.desc')
         },
         {
-            id: 'hvac',
+            id: 'cloudDashboards',
             image: image2,
-            name: t('services.hvacFirefighting.name'),
-            desc: t('services.hvacFirefighting.desc')
+            name: t('services.cloudDashboards.name'),
+            desc: t('services.cloudDashboards.desc')
         },
         {
-            id: 'plumbing',
+            id: 'paymentGateways',
             image: image3,
-            name: t('services.plumbingInfrastructure.name'),
-            desc: t('services.plumbingInfrastructure.desc')
+            name: t('services.paymentGateways.name'),
+            desc: t('services.paymentGateways.desc')
         }
     ]
 })

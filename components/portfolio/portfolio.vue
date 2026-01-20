@@ -3,7 +3,7 @@
     <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="portfolio">
         <div class="container">
             <div class="grid grid-cols-1 pb-8 text-center">
-                <h6 class="text-emerald-600 text-base font-medium uppercase mb-2">{{ t('portfolio.title') }}</h6>
+                <h6 class="text-blue-800 text-base font-medium uppercase mb-2">{{ t('portfolio.title') }}</h6>
                 <h3 class="mb-4 md:text-2xl text-xl font-medium dark:text-white">{{ t('portfolio.subtitle') }}</h3>
 
                 <p class="text-slate-400 dark:text-slate-300 max-w-xl mx-auto">{{ t('portfolio.description') }}</p>
@@ -31,12 +31,12 @@
             <!-- Previous Projects List -->
             <div class="mt-16">
                 <div class="text-center mb-8">
-                    <h6 class="text-emerald-600 text-base font-medium uppercase mb-2">{{ t('portfolio.previousProjects') }}</h6>
+                    <h6 class="text-blue-800 text-base font-medium uppercase mb-2">{{ t('portfolio.previousProjects') }}</h6>
                 </div>
                 <div class="max-w-4xl mx-auto bg-white dark:bg-slate-900 p-8 rounded-lg shadow-lg">
                     <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 list-none">
                         <li v-for="(project, index) in previousProjects" :key="index" class="flex items-start">
-                            <span class="text-emerald-600 font-semibold me-2">{{ index + 1 }}.</span>
+                            <span class="text-blue-800 font-semibold me-2">{{ index + 1 }}.</span>
                             <span class="text-slate-400 dark:text-slate-300">{{ project }}</span>
                         </li>
                     </ul>
@@ -56,7 +56,7 @@
                 <p class="text-white opacity-50 max-w-xl mx-auto">{{ t('portfolio.contactToday') }}</p>
             
                 <div class="relative mt-10">
-                    <a href="#contact" class="btn bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white rounded-md">{{ t('buttons.getStarted') }} !</a>
+                    <a href="#contact" class="btn bg-blue-800 hover:bg-blue-900 border-blue-800 hover:border-blue-900 text-white rounded-md">{{ t('buttons.getStarted') }} !</a>
                 </div>
             </div><!--end grid-->
         </div><!--end container-->
@@ -65,12 +65,11 @@
 </template>
 
 <script>
-import mostakbalMasrImg from '@/assets/images/mostakbal masr/Screenshot 2025-12-09 155820.png';
-import monorailGarageImg from '@/assets/images/monorail/Screenshot 2025-12-09 161651.png';
-import administration90thImg from '@/assets/images/90th/Screenshot 2025-12-09 162536.png';
-import newAdminCapitalImg from '@/assets/images/capitalnew/Screenshot 2025-12-09 163033.png';
-import newDamiettaImg from '@/assets/images/damietta/Screenshot 2025-12-09 164002.png';
-import newAdminCapitalPumpsImg from '@/assets/images/New Administrative/Screenshot 2025-12-09 164250.png';
+// Using placeholder images - replace with actual project images when available
+import dogLifeAIImg from '@/assets/images/bg/hero-bg.jpg';
+import lmenusImg from '@/assets/images/bg/1.jpg';
+import nutriFitImg from '@/assets/images/bg/2.jpg';
+import myClinicSystemImg from '@/assets/images/bg/3.jpg';
 import ctaImg from '@/assets/images/bg/cta.png';
 import VueEasyLightbox from 'vue-easy-lightbox';
 import { ref, computed } from 'vue'
@@ -99,34 +98,24 @@ export default {
             const lang = currentLang.value
             return [
                 {
-                    id: 'mostakbal-masr',
-                    image: mostakbalMasrImg,
-                    name: t('portfolio.projectDetails.mostakbalMasr.name'),
+                    id: 'dog-life-ai',
+                    image: dogLifeAIImg,
+                    name: t('portfolio.projectDetails.dogLifeAI.name'),
                 },
                 {
-                    id: 'monorail-garage',
-                    image: monorailGarageImg,
-                    name: t('portfolio.projectDetails.monorailGarage.name'),
+                    id: 'lmenus',
+                    image: lmenusImg,
+                    name: t('portfolio.projectDetails.lmenus.name'),
                 },
                 {
-                    id: 'administration-90th',
-                    image: administration90thImg,
-                    name: t('portfolio.projectDetails.administration90th.name'),
+                    id: 'nutri-fit',
+                    image: nutriFitImg,
+                    name: t('portfolio.projectDetails.nutriFit.name'),
                 },
                 {
-                    id: 'new-admin-capital',
-                    image: newAdminCapitalImg,
-                    name: t('portfolio.projectDetails.newAdminCapital.name'),
-                },
-                {
-                    id: 'new-damietta',
-                    image: newDamiettaImg,
-                    name: t('portfolio.projectDetails.newDamietta.name'),
-                },
-                {
-                    id: 'new-admin-capital-pumps',
-                    image: newAdminCapitalPumpsImg,
-                    name: t('portfolio.projectDetails.newAdminCapitalPumps.name'),
+                    id: 'my-clinic-system',
+                    image: myClinicSystemImg,
+                    name: t('portfolio.projectDetails.myClinicSystem.name'),
                 }
             ]
         })

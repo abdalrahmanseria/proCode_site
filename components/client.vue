@@ -3,7 +3,7 @@
         <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="clients">
             <div class="container">
                 <div class="grid grid-cols-1 pb-8 text-center">
-                    <h6 class="text-emerald-600 text-base font-medium uppercase mb-2">{{ t('clients.title') }}</h6>
+                    <h6 class="text-blue-800 text-base font-medium uppercase mb-2">{{ t('clients.title') }}</h6>
                     <h3 class="mb-4 md:text-2xl text-xl font-medium dark:text-white">{{ t('clients.subtitle') }}</h3>
                     <p class="text-slate-400 dark:text-slate-300 max-w-xl mx-auto">{{ t('clients.description') }}</p>
                 </div><!--end grid-->

@@ -64,7 +64,7 @@ import { ref } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
 
 const { t } = useLanguage()
-const whatsappNumber = '201003923040'
+const whatsappNumber = '966573092631'
 const phoneError = ref(false)
 
 const formData = ref({

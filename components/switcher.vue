@@ -1,6 +1,6 @@
 <template>
     <div>
-        <a href="#" @click="scrollToTop" v-show="showTopButton" id="back-to-top" class="fixed text-lg rounded-full z-10 bottom-5 right-5 size-9 text-center bg-emerald-600 text-white leading-9"><i class="mdi mdi-arrow-up"></i></a>
+        <a href="#" @click="scrollToTop" v-show="showTopButton" id="back-to-top" class="fixed text-lg rounded-full z-10 bottom-5 right-5 size-9 text-center bg-blue-800 hover:bg-blue-900 text-white leading-9 transition-colors duration-300"><i class="mdi mdi-arrow-up"></i></a>
         <!-- Back to top -->
 
         <!-- Switcher -->

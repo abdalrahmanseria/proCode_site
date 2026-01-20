@@ -66,7 +66,7 @@
                 <p class="text-slate-400 dark:text-slate-300 max-w-xl mx-auto">{{ t('contact.description') }}</p>
             
                 <div class="mt-6">
-                    <NuxtLink to="/#contact" class="py-2 px-5 inline-block font-normal tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white rounded-md">
+                    <NuxtLink to="/#contact" class="py-2 px-5 inline-block font-normal tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-blue-800 hover:bg-blue-900 border-blue-800 hover:border-blue-900 text-white rounded-md">
                         <i class="uil uil-phone align-middle me-2"></i> {{ t('portfolio.projectDetails.contactUs') }}
                     </NuxtLink>
                 </div>
@@ -183,74 +183,45 @@ export default {
         const lightboxIndex = ref(0)
         
         const projectId = computed(() => {
-            return route.query.id || 'mostakbal-masr'
+            return route.query.id || 'dog-life-ai'
         })
         
         const projectData = computed(() => {
             const lang = currentLang.value
-            if (projectId.value === 'mostakbal-masr') {
-                const scope1Items = t('portfolio.projectDetails.mostakbalMasr.scope1.items')
-                const scope1Title = t('portfolio.projectDetails.mostakbalMasr.scope1.title')
-                const scope2Title = t('portfolio.projectDetails.mostakbalMasr.scope2.title')
-                const scope2Desc = t('portfolio.projectDetails.mostakbalMasr.scope2.description')
-                const scope3Title = t('portfolio.projectDetails.mostakbalMasr.scope3.title')
-                const scope3Desc = t('portfolio.projectDetails.mostakbalMasr.scope3.description')
-                
+            if (projectId.value === 'dog-life-ai') {
                 return {
-                    name: t('portfolio.projectDetails.mostakbalMasr.name'),
-                    location: t('portfolio.projectDetails.mostakbalMasr.location'),
-                    description: `${scope1Title}: Supply, install, commissioning, start-up and operation the following site networks. ${scope2Title}. ${scope3Title}.`,
-                    scopeOfWork: [
-                        ...(Array.isArray(scope1Items) ? scope1Items : []),
-                        `${scope2Title}: ${scope2Desc}`,
-                        `${scope3Title}: ${scope3Desc}`
-                    ],
-                    images: mostakbalMasrImages
+                    name: t('portfolio.projectDetails.dogLifeAI.name'),
+                    location: t('portfolio.projectDetails.dogLifeAI.location'),
+                    description: t('portfolio.projectDetails.dogLifeAI.scopeOfWork'),
+                    scopeOfWork: t('portfolio.projectDetails.dogLifeAI.scopeOfWork'),
+                    images: []
                 }
             }
-            if (projectId.value === 'monorail-garage') {
+            if (projectId.value === 'lmenus') {
                 return {
-                    name: t('portfolio.projectDetails.monorailGarage.name'),
-                    location: t('portfolio.projectDetails.monorailGarage.location'),
-                    description: t('portfolio.projectDetails.monorailGarage.scopeOfWork'),
-                    scopeOfWork: t('portfolio.projectDetails.monorailGarage.scopeOfWork'),
-                    images: monorailGarageImages
+                    name: t('portfolio.projectDetails.lmenus.name'),
+                    location: t('portfolio.projectDetails.lmenus.location'),
+                    description: t('portfolio.projectDetails.lmenus.scopeOfWork'),
+                    scopeOfWork: t('portfolio.projectDetails.lmenus.scopeOfWork'),
+                    images: []
                 }
             }
-            if (projectId.value === 'administration-90th') {
+            if (projectId.value === 'nutri-fit') {
                 return {
-                    name: t('portfolio.projectDetails.administration90th.name'),
-                    location: t('portfolio.projectDetails.administration90th.location'),
-                    description: t('portfolio.projectDetails.administration90th.scopeOfWork'),
-                    scopeOfWork: t('portfolio.projectDetails.administration90th.scopeOfWork'),
-                    images: administration90thImages
+                    name: t('portfolio.projectDetails.nutriFit.name'),
+                    location: t('portfolio.projectDetails.nutriFit.location'),
+                    description: t('portfolio.projectDetails.nutriFit.scopeOfWork'),
+                    scopeOfWork: t('portfolio.projectDetails.nutriFit.scopeOfWork'),
+                    images: []
                 }
             }
-            if (projectId.value === 'new-admin-capital') {
+            if (projectId.value === 'my-clinic-system') {
                 return {
-                    name: t('portfolio.projectDetails.newAdminCapital.name'),
-                    location: t('portfolio.projectDetails.newAdminCapital.location'),
-                    description: t('portfolio.projectDetails.newAdminCapital.scopeOfWork'),
-                    scopeOfWork: t('portfolio.projectDetails.newAdminCapital.scopeOfWork'),
-                    images: newAdminCapitalImages
-                }
-            }
-            if (projectId.value === 'new-damietta') {
-                return {
-                    name: t('portfolio.projectDetails.newDamietta.name'),
-                    location: t('portfolio.projectDetails.newDamietta.location'),
-                    description: t('portfolio.projectDetails.newDamietta.scopeOfWork'),
-                    scopeOfWork: t('portfolio.projectDetails.newDamietta.scopeOfWork'),
-                    images: newDamiettaImages
-                }
-            }
-            if (projectId.value === 'new-admin-capital-pumps') {
-                return {
-                    name: t('portfolio.projectDetails.newAdminCapitalPumps.name'),
-                    location: t('portfolio.projectDetails.newAdminCapitalPumps.location'),
-                    description: t('portfolio.projectDetails.newAdminCapitalPumps.scopeOfWork'),
-                    scopeOfWork: t('portfolio.projectDetails.newAdminCapitalPumps.scopeOfWork'),
-                    images: newAdminCapitalPumpsImages
+                    name: t('portfolio.projectDetails.myClinicSystem.name'),
+                    location: t('portfolio.projectDetails.myClinicSystem.location'),
+                    description: t('portfolio.projectDetails.myClinicSystem.scopeOfWork'),
+                    scopeOfWork: t('portfolio.projectDetails.myClinicSystem.scopeOfWork'),
+                    images: []
                 }
             }
             return null
@@ -298,7 +269,7 @@ export default {
 <style lang="scss" scoped>
 .custom-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: #10b981 rgba(0, 0, 0, 0.1);
+    scrollbar-color: #1e40af rgba(0, 0, 0, 0.1);
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -311,17 +282,17 @@ export default {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #10b981;
+    background: #1e40af;
     border-radius: 4px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #059669;
+    background: #1e3a8a;
 }
 
 /* Dark mode scrollbar */
 .dark .custom-scrollbar {
-    scrollbar-color: #10b981 rgba(255, 255, 255, 0.1);
+    scrollbar-color: #1e40af rgba(255, 255, 255, 0.1);
 }
 
 .dark .custom-scrollbar::-webkit-scrollbar-track {
@@ -329,10 +300,10 @@ export default {
 }
 
 .dark .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #10b981;
+    background: #1e40af;
 }
 
 .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #059669;
+    background: #1e3a8a;
 }
 </style>

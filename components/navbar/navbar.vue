@@ -60,9 +60,9 @@
                         <li class="nav-item blog">
                             <a class="nav-link" href="#blog" @click="closeMobileMenu">{{ t('nav.blog') }}</a>
                         </li>
-                        <li class="nav-item suppliers">
+                        <!-- <li class="nav-item suppliers">
                             <a class="nav-link" href="#suppliers" @click="closeMobileMenu">{{ t('nav.suppliers') }}</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item contact">
                             <a class="nav-link" href="#contact" @click="closeMobileMenu">{{ t('nav.contact') }}</a>
                         </li>
@@ -89,7 +89,7 @@ const sections = ref([])
 const navLi = ref([])
 const current = ref("")
 const sectionTop = ref(null)
-const whatsappNumber = '201003923040'
+const whatsappNumber = '966573092631'
 const showDropdown = ref(false)
 const showServicesDropdown = ref(false)
 

@@ -2,7 +2,7 @@
       <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="contact">
             <div class="container">
                 <div class="grid grid-cols-1 pb-8 text-center">
-                    <h6 class="text-emerald-600 text-base font-medium uppercase mb-2">{{ t('contact.contactUs') }}</h6>
+                    <h6 class="text-blue-800 text-base font-medium uppercase mb-2">{{ t('contact.contactUs') }}</h6>
                     <h3 class="mb-4 md:text-2xl text-xl font-medium dark:text-white">{{ t('contact.title') }}</h3>
 
                     <p class="text-slate-400 dark:text-slate-300 max-w-xl mx-auto">{{ t('contact.description') }}</p>
@@ -31,7 +31,7 @@
                                         <textarea v-model="formData.message" name="comments" id="comments" class="form-input textarea h-28" :placeholder="t('form.message')" required></textarea>
                                     </div>
                                 </div>
-                                <button type="submit" id="submit" name="send" class="btn bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white rounded-md h-11 justify-center flex items-center">{{ t('buttons.sendMessage') }}</button>
+                                <button type="submit" id="submit" name="send" class="btn bg-blue-800 hover:bg-blue-900 border-blue-800 hover:border-blue-900 text-white rounded-md h-11 justify-center flex items-center">{{ t('buttons.sendMessage') }}</button>
                             </form>
                         </div>
                     </div>
@@ -45,8 +45,8 @@
     
                                 <div class="flex-1 ms-6">
                                     <h5 class="text-lg dark:text-white mb-2 font-medium">{{ t('contact.phone') }}</h5>
-                                    <a href="tel:+201094892311" class="text-slate-400 block mb-2">+2 01094892311</a>
-                                    <a :href="`https://wa.me/${whatsappNumber}`" target="_blank" class="inline-flex items-center text-emerald-600 hover:text-emerald-700">
+                                    <a href="tel:+966573092631" class="text-slate-400 block mb-2">+966 57 309 2631</a>
+                                    <a :href="`https://wa.me/${whatsappNumber}`" target="_blank" class="inline-flex items-center text-blue-800 hover:text-blue-900">
                                         <i class="uil uil-whatsapp text-xl me-1"></i>
                                         <span>{{ t('contact.whatsapp') }}</span>
                                     </a>
@@ -60,7 +60,7 @@
     
                                 <div class="flex-1 ms-6">
                                     <h5 class="text-lg dark:text-white mb-2 font-medium">{{ t('contact.email') }}</h5>
-                                    <a href="mailto:elsharque.projects@gmail.com" class="text-slate-400">elsharque.projects@gmail.com</a>
+                                    <!-- <a href="mailto:elsharque.projects@gmail.com" class="text-slate-400">elsharque.projects@gmail.com</a> -->
                                 </div>
                             </div>
     
@@ -71,8 +71,8 @@
     
                                 <div class="flex-1 ms-6">
                                     <h5 class="text-lg dark:text-white mb-2 font-medium">{{ t('contact.location') }}</h5>
-                                    <p class="text-slate-400 mb-2">Building 2023, Apartment No. 4, Extension of Al-Ayada Street, Officers Housing, Nasr City, Cairo Governorate, Egypt</p>
-                                    <p class="text-slate-400 mb-2 text-right" dir="rtl">عمارة 2023 شقة رقم ٤، امتداد شارع العيادة، مساكن الضباط، مدينة نصر، محافظة القاهرة</p>
+                                    <!-- <p class="text-slate-400 mb-2">Building 2023, Apartment No. 4, Extension of Al-Ayada Street, Officers Housing, Nasr City, Cairo Governorate, Egypt</p> -->
+                                    <!-- <p class="text-slate-400 mb-2 text-right" dir="rtl">عمارة 2023 شقة رقم ٤، امتداد شارع العيادة، مساكن الضباط، مدينة نصر، محافظة القاهرة</p> -->
                                 </div>
                             </div>
                         </div>
@@ -88,7 +88,7 @@ import { ref } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
 
 const { t } = useLanguage()
-const whatsappNumber = '201003923040'
+const whatsappNumber = '966573092631'
 
 const formData = ref({
     name: '',

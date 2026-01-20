@@ -14,8 +14,6 @@
                         <li class="inline-block text-white/50 mx-5"> <span class="text-white block">Time :</span> <span class="block">8 Min Read</span></li>
                     </ul>
 
-
-                    
                 </div><!--end grid-->
             </div><!--end container-->
         </section><!--end section-->

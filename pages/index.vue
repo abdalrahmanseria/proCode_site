@@ -35,7 +35,7 @@
 
                 <div class="relative mt-10">
                     <a href="#contact"
-                        class="btn bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white rounded-md">{{ t('buttons.getStarted') }}</a>
+                        class="btn bg-blue-800 hover:bg-blue-900 border-blue-800 hover:border-blue-900 text-white rounded-md">{{ t('buttons.getStarted') }}</a>
                 </div>
             </div>
         </div><!--end container-->
@@ -46,7 +46,7 @@
     <portfolio />
     <client />
     <blog />
-    <suppliers />
+    <!-- <suppliers /> -->
     <getintouch />
     <fooTer />
 
@@ -67,10 +67,14 @@ import fooTer from '@/components/footer.vue';
 import { useLanguage } from '~/composables/useLanguage'
 
 // Import background images
-import heroBg from '@/assets/images/bg/hero-bg.jpg'
 import bg1 from '@/assets/images/bg/1.jpg'
 import bg2 from '@/assets/images/bg/2.jpg'
 import bg3 from '@/assets/images/bg/3.jpg'
+import bg4 from '@/assets/images/bg/4.jpg'
+import bg5 from '@/assets/images/bg/5.jpg'
+import bg314785 from '@/assets/images/bg/314785.png'
+// import bgOIP1 from '@/assets/images/bg/OIP (1).png'
+import bgOIP from '@/assets/images/bg/OIP.png'
 
 const { t, currentLang } = useLanguage()
 const displayText = ref('')
@@ -81,7 +85,7 @@ let typewriterTimeout = null
 
 // Background slider
 const currentSlide = ref(0)
-const backgroundImages = [heroBg, bg1, bg2, bg3]
+const backgroundImages = [bg1, bg2, bg3, bg4, bg5, bg314785, bgOIP]
 let sliderInterval = null
 
 // Services reference
@@ -217,7 +221,7 @@ onBeforeUnmount(() => {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
+  background: linear-gradient(90deg, #1e40af 0%, #1e3a8a 100%);
   border-radius: 2px;
 }
 
