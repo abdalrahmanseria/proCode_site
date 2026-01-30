@@ -8,13 +8,13 @@
                     <p class="text-slate-400 dark:text-slate-300 max-w-xl mx-auto">{{ t('clients.description') }}</p>
                 </div><!--end grid-->
                 
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8">
+                <!-- <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8">
                     <div v-for="(client, index) in clients" :key="index" 
                         class="flex items-center justify-center p-4 bg-white dark:bg-slate-900 rounded-lg shadow shadow-slate-200 dark:shadow-slate-700 hover:shadow-lg transition-shadow duration-300">
                         <img :src="client.image" :alt="client.name" 
                             class="max-w-full h-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
                     </div>
-                </div>
+                </div> -->
             </div><!--end container-->
         </section>
     </div>
