@@ -2,15 +2,15 @@
     <nav class="navbar" id="navbar" @scroll="handleScroll">
         <div class="container-fluid px-4 md:px-10 flex lg_992:flex-nowrap flex-wrap items-center justify-between">
             <NuxtLink class="navbar-brand flex items-center flex-shrink-0" to="/">
-                <img :src="logoImg" class="h-24 md:h-28 dark:hidden" alt="ELSHARQUE">
-                <img :src="logoImg" class="h-24 md:h-28 hidden dark:inline-block" alt="ELSHARQUE">
+                <img :src="logoImg" class="h-[72px] md:h-[88px] dark:hidden" alt="ELSHARQUE">
+                <img :src="logoImg" class="h-[72px] md:h-[88px] hidden dark:inline-block" alt="ELSHARQUE">
             </NuxtLink>
 
             <div class="nav-icons flex items-center lg_992:order-2">
                 <!-- Navbar Button -->
                 <ul class="list-none menu-social mb-0">
                     <li class="inline">
-                        <a href="#" target="_blank"
+                        <a href="https://web.facebook.com/profile.php/?id=61579639703417&_rdc=1&_rdr#" target="_blank"
                             class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i
                                 class="uil uil-facebook-f"></i></a>
                     </li>
@@ -79,9 +79,9 @@
                     <li class="nav-item clients">
                         <a class="nav-link" href="#clients" @click="closeMobileMenu">{{ t('nav.review') }}</a>
                     </li>
-                    <li class="nav-item blog">
+                    <!-- <li class="nav-item blog">
                         <a class="nav-link" href="#blog" @click="closeMobileMenu">{{ t('nav.blog') }}</a>
-                    </li>
+                    </li> -->
                     <!-- <li class="nav-item suppliers">
                             <a class="nav-link" href="#suppliers" @click="closeMobileMenu">{{ t('nav.suppliers') }}</a>
                         </li> -->
@@ -104,7 +104,7 @@
 <script setup>
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
-import logoImg from '@/assets/images/logo (2).png'
+import logoImg from '@/assets/images/new logo (2).png'
 
 const { t, currentLang, isRTL, toggleLanguage } = useLanguage()
 const toggle = ref(false)
@@ -306,4 +306,5 @@ const onscroll = () => {
 .dark .dropdown-link:hover {
     background: #064e3b;
     color: white;
-}</style>
+}
+</style>

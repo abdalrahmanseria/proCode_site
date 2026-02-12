@@ -2,15 +2,16 @@
     <nav class="navbar" id="navbar" @scroll="handleScroll">
         <div class="container-fluid px-4 md:px-10 flex lg_992:flex-nowrap flex-wrap items-center justify-between">
             <NuxtLink class="navbar-brand flex items-center flex-shrink-0" to="/">
-                <img :src="logoImg" class="h-24 md:h-28 dark:hidden logo-image" alt="ProCode Solutions">
-                <img :src="logoImg" class="h-24 md:h-28 hidden dark:inline-block logo-image" alt="ProCode Solutions">
+                <img :src="logoImg" class="h-[72px] md:h-[88px] dark:hidden logo-image" alt="ProCode Solutions">
+                <img :src="logoImg" class="h-[72px] md:h-[88px] hidden dark:inline-block logo-image"
+                    alt="ProCode Solutions">
             </NuxtLink>
 
             <div class="nav-icons flex items-center lg_992:order-2">
                 <!-- Navbar Button -->
                 <ul class="list-none menu-social mb-0 space-x-1">
                     <li class="inline">
-                        <a href="#" target="_blank">
+                        <a href="https://web.facebook.com/profile.php/?id=61579639703417&_rdc=1&_rdr#" target="_blank">
                             <span class="login-btn-primary"><span
                                     class="btn btn-sm btn-icon rounded-full bg-blue-800 hover:bg-blue-900 border-blue-800 hover:border-blue-900 text-white"><i
                                         class="uil uil-facebook-f"></i></span></span>
@@ -96,9 +97,9 @@
                     <li class="nav-item clients">
                         <a class="nav-link" href="#clients" @click="closeMobileMenu">{{ t('nav.review') }}</a>
                     </li>
-                    <li class="nav-item blog">
+                    <!-- <li class="nav-item blog">
                         <a class="nav-link" href="#blog" @click="closeMobileMenu">{{ t('nav.blog') }}</a>
-                    </li>
+                    </li> -->
                     <!-- <li class="nav-item suppliers">
                             <a class="nav-link" href="#suppliers" @click="closeMobileMenu">{{ t('nav.suppliers') }}</a>
                         </li> -->
@@ -121,7 +122,7 @@
 <script setup>
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
-import logoImg from '@/assets/images/proCodeLogo.png'
+import logoImg from '@/assets/images/new logo (2).png'
 
 const { t, currentLang, isRTL, toggleLanguage } = useLanguage()
 const toggle = ref(false)
@@ -326,27 +327,19 @@ const onscroll = () => {
 }
 
 .logo-image {
-    border-radius: 12px;
-    padding: 8px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
     object-fit: contain;
 }
 
 .logo-image:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    background: rgba(255, 255, 255, 0.08);
 }
 
 .dark .logo-image {
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    /* No additional styles needed for dark mode if we want it clear */
 }
 
 .dark .logo-image:hover {
-    background: rgba(255, 255, 255, 0.12);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-}</style>
+    /* No additional styles needed */
+}
+</style>

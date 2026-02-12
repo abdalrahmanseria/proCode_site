@@ -129,6 +129,7 @@ const translations = {
         client: 'Client',
         category: 'Category',
         date: 'Date',
+        url: 'Project Link',
         haveQuestion: 'Have Question ? Get in touch!',
         contactUs: 'Contact us',
         dogLifeAI: {
@@ -150,6 +151,18 @@ const translations = {
           name: 'My Clinic System (سيستم عيادتي)',
           location: 'Web & Mobile Application',
           scopeOfWork: 'A comprehensive management tool for doctors to handle bookings, patient archives, and financial reports. The system streamlines clinic operations with secure patient data management and automated scheduling.'
+        },
+        qvStyle: {
+          name: 'QVStyle',
+          location: 'Web & Mobile Application',
+          scopeOfWork: 'QVStyle is a modern fashion e-commerce platform designed with a mobile-first approach and enhanced web performance. The system includes a powerful admin dashboard for inventory, orders, suppliers, and product management, along with a responsive storefront optimized for speed, scalability, and user experience. Built using .NET backend APIs, PostgreSQL database, and Vue.js frontend, the platform delivers secure authentication, real-time stock tracking, barcode/QR support, and production-ready deployment.',
+          url: 'https://38.242.253.237.sslip.io/QV/'
+        },
+        turathna: {
+          name: 'Turathna',
+          location: 'Web & Handheld Application',
+          scopeOfWork: 'Turathna is a comprehensive retail and inventory management system designed to modernize traditional businesses through digital transformation. The platform combines a powerful admin dashboard, real-time stock control, and an integrated POS experience with barcode scanning to streamline daily sales and operations. Built with a scalable .NET backend and Vue.js frontend, Turathna delivers fast performance, secure authentication, and production-ready deployment for both desktop and handheld devices.',
+          url: 'https://turathunas.com/'
         }
       }
     },
@@ -317,6 +330,7 @@ const translations = {
         client: 'العميل',
         category: 'الفئة',
         date: 'التاريخ',
+        url: 'رابط المشروع',
         haveQuestion: 'هل لديك سؤال؟ تواصل معنا!',
         contactUs: 'اتصل بنا',
         dogLifeAI: {
@@ -338,6 +352,18 @@ const translations = {
           name: 'My Clinic System (سيستم عيادتي)',
           location: 'تطبيق ويب وموبايل',
           scopeOfWork: 'أداة إدارة شاملة للأطباء للتعامل مع الحجوزات وأرشيفات المرضى والتقارير المالية. يبسط النظام عمليات العيادة مع إدارة آمنة لبيانات المرضى والجدولة الآلية.'
+        },
+        qvStyle: {
+          name: 'QVStyle',
+          location: 'تطبيق ويب وموبايل',
+          scopeOfWork: 'منصة تجارة إلكترونية للأزياء مصممة بنهج يركز على الهاتف المحمول وأداء ويب محسن. يتضمن النظام لوحة تحكم قوية للمخزون والطلبات والموردين وإدارة المنتجات، إلى جانب واجهة متجر سريعة الاستجابة محسنة للسرعة وقابلية التوسع وتجربة المستخدم. تم بناؤه باستخدام واجهات برمجة تطبيقات .NET وقاعدة بيانات PostgreSQL وواجهة Vue.js، وتوفر المنصة مصادقة آمنة وتتبع المخزون في الوقت الفعلي ودعم الباركود/QR ونشر جاهز للإنتاج.',
+          url: 'https://38.242.253.237.sslip.io/QV/'
+        },
+        turathna: {
+          name: 'تراثنا',
+          location: 'تطبيق ويب وأجهزة محمولة',
+          scopeOfWork: 'نظام إدارة تجزئة ومخزون شامل مصمم لتحديث الأعمال التقليدية من خلال التحول الرقمي. تجمع المنصة بين لوحة تحكم إدارية قوية ، وتحكم في المخزون في الوقت الفعلي ، وتجربة نقاط بيع متكاملة مع مسح الباركود لتبسيط المبيعات والعمليات اليومية. مبني بنظام backend .NET قابل للتوسع وواجهة Vue.js الأمامية ، يوفر Turathna أداءً سريعًا ومصادقة آمنة ونشرًا جاهزًا للإنتاج لكل من أجهزة الكمبيوتر المكتبية والأجهزة المحمولة.',
+          url: 'https://turathunas.com/'
         }
       }
     },

@@ -25,6 +25,7 @@ export default defineNuxtConfig({
         { name: 'format-detection', content: 'telephone=no' },
       ],
       link: [
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
         {
           // rel: 'stylesheet',
           // href: 'https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css',
