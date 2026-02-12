@@ -22,7 +22,7 @@ const translations = {
         overview: 'Overview',
         mission: 'Mission',
         vision: 'Vision',
-        chairmanWord: 'Chairman Word'
+
       },
       servicesMenu: {
         aiLLM: 'AI & LLM Integration',
@@ -47,19 +47,7 @@ const translations = {
       vision: 'To be a global leader in AI-driven innovation, empowering businesses to reach their full potential through smart automation.',
       missionTitle: 'Mission',
       mission: 'To provide high-quality, scalable digital solutions (Mobile, Web, AI) that solve real-world problems and bridge the gap between technology and daily life.',
-      chairmanWord: {
-        title: 'Chairman Word',
-        greeting: 'Dear valued stakeholders,',
-        paragraph1: 'As the chairman of our esteemed organization, I am delighted to address you. I am profoundly grateful for the trust you have bestowed upon us, enabling us to serve you and contribute to your prosperity.',
-        paragraph2: 'Our strong vision and well-defined mission form the bedrock of our operations. We constantly innovate to surpass expectations and meet our customers\' evolving needs.',
-        paragraph3: 'At ProCode Solutions, we believe success is built upon unwavering commitment, integrity, and excellence. Our exceptional team, coupled with cutting-edge AI technology, delivers solutions of exceptional quality that transform businesses.',
-        paragraph4: 'We cherish our relationships with clients, partners, and stakeholders, committed to nurturing these connections for years to come. Your support inspires us to raise the bar even higher in AI-driven innovation.',
-        paragraph5: 'Thank you for your continued support and trust in ProCode Solutions. Together, let us continue to build a future that is powered by intelligent code, innovation, and excellence.',
-        closing: 'Warm regards,',
-        ceoName: 'Dr. Eng. Ahmed Khaled',
-        ceoTitle: 'CEO',
-        ceoSubtitle: 'Lecturer at Faculty of Engineering, Menofia University'
-      }
+
     },
     services: {
       whatWeDo: 'What We Do ?',
@@ -222,7 +210,7 @@ const translations = {
         overview: 'نظرة عامة',
         mission: 'المهمة',
         vision: 'الرؤية',
-        chairmanWord: 'كلمة رئيس مجلس الإدارة'
+
       },
       servicesMenu: {
         aiLLM: 'تكامل الذكاء الاصطناعي ونماذج اللغة الكبيرة',
@@ -247,19 +235,7 @@ const translations = {
       vision: 'أن نكون رائداً عالمياً في الابتكار المدعوم بالذكاء الاصطناعي، وتمكين الشركات من الوصول إلى إمكاناتها الكاملة من خلال الأتمتة الذكية.',
       missionTitle: 'الرسالة',
       mission: 'تقديم حلول رقمية عالية الجودة وقابلة للتطوير (موبايل، ويب، ذكاء اصطناعي) تحل المشاكل الحقيقية وتربط بين التكنولوجيا والحياة اليومية.',
-      chairmanWord: {
-        title: 'كلمة رئيس مجلس الإدارة',
-        greeting: 'أعزائي أصحاب المصلحة الكرام،',
-        paragraph1: 'بصفتي رئيس مجلس إدارة منظمتنا الموقرة، يسعدني أن أتحدث إليكم. أنا ممتن بعمق للثقة التي أوليتمونا إياها، مما مكننا من خدمتكم والمساهمة في ازدهاركم.',
-        paragraph2: 'رؤيتنا القوية ومهمتنا المحددة بوضوح تشكلان الأساس لعملياتنا. نحن نبتكر باستمرار لتجاوز التوقعات وتلبية احتياجات عملائنا المتطورة.',
-        paragraph3: 'في ProCode Solutions، نؤمن بأن النجاح يُبنى على الالتزام الثابت والنزاهة والتميز. فريقنا الاستثنائي، إلى جانب تكنولوجيا الذكاء الاصطناعي المتطورة، يقدم حلولاً بجودة استثنائية تحول الأعمال.',
-        paragraph4: 'نحن نعتز بعلاقاتنا مع العملاء والشركاء وأصحاب المصلحة، ملتزمون برعاية هذه الروابط لسنوات قادمة. دعمكم يلهمنا لرفع المعايير إلى مستوى أعلى في الابتكار المدعوم بالذكاء الاصطناعي.',
-        paragraph5: 'شكراً لكم على دعمكم المستمر وثقتكم في ProCode Solutions. معاً، دعونا نواصل بناء مستقبل مدعوم بالكود الذكي والابتكار والتميز.',
-        closing: 'مع أطيب التحيات،',
-        // ceoName: 'م.د / أحمد خالد',
-        // ceoTitle: 'رئيس مجلس الإدارة',
-        // ceoSubtitle: 'مدرس بكلية الهندسة، جامعة المنوفية'
-      }
+
     },
     services: {
       whatWeDo: 'ماذا نفعل ؟',

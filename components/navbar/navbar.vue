@@ -1,81 +1,104 @@
 <template>
     <nav class="navbar" id="navbar" @scroll="handleScroll">
-            <div class="container-fluid px-4 md:px-10 flex lg_992:flex-nowrap flex-wrap items-center justify-between">
-                <NuxtLink class="navbar-brand flex items-center flex-shrink-0" to="/">
-                    <img :src="logoImg" class="h-24 md:h-28 dark:hidden" alt="ELSHARQUE">
-                    <img :src="logoImg" class="h-24 md:h-28 hidden dark:inline-block" alt="ELSHARQUE">
-                </NuxtLink>
+        <div class="container-fluid px-4 md:px-10 flex lg_992:flex-nowrap flex-wrap items-center justify-between">
+            <NuxtLink class="navbar-brand flex items-center flex-shrink-0" to="/">
+                <img :src="logoImg" class="h-24 md:h-28 dark:hidden" alt="ELSHARQUE">
+                <img :src="logoImg" class="h-24 md:h-28 hidden dark:inline-block" alt="ELSHARQUE">
+            </NuxtLink>
 
-                <div class="nav-icons flex items-center lg_992:order-2">
-                    <!-- Navbar Button -->
-                    <ul class="list-none menu-social mb-0">
-                        <li class="inline">
-                            <a href="#" target="_blank" class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i class="uil uil-facebook-f"></i></a>
-                        </li>
-                        <li class="inline">
-                            <a :href="`https://wa.me/${whatsappNumber}`" target="_blank" class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i class="uil uil-whatsapp"></i></a>
-                        </li>
-                        <li class="inline">
-                            <a href="#" target="_blank" class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i class="uil uil-linkedin"></i></a>
-                        </li>
-                    </ul>
-                    <!-- Navbar Collapse Manu Button -->
-                    <button data-collapse="menu-collapse" type="button" class="collapse-btn inline-flex items-center ms-3 text-dark dark:text-white lg_992:hidden" aria-controls="menu-collapse" aria-expanded="false" @click="handler">
-                        <span class="sr-only" >Navigation Menu</span>
-                        <i class="mdi mdi-menu mdi-24px"></i>
-                    </button>
-                </div>
+            <div class="nav-icons flex items-center lg_992:order-2">
+                <!-- Navbar Button -->
+                <ul class="list-none menu-social mb-0">
+                    <li class="inline">
+                        <a href="#" target="_blank"
+                            class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i
+                                class="uil uil-facebook-f"></i></a>
+                    </li>
+                    <li class="inline">
+                        <a :href="`https://wa.me/${whatsappNumber}`" target="_blank"
+                            class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i
+                                class="uil uil-whatsapp"></i></a>
+                    </li>
+                    <li class="inline">
+                        <a href="#" target="_blank"
+                            class="btn btn-sm btn-icon rounded-full bg-emerald-600 hover:bg-emerald-700 border-emerald-600 hover:border-emerald-700 text-white"><i
+                                class="uil uil-linkedin"></i></a>
+                    </li>
+                </ul>
+                <!-- Navbar Collapse Manu Button -->
+                <button data-collapse="menu-collapse" type="button"
+                    class="collapse-btn inline-flex items-center ms-3 text-dark dark:text-white lg_992:hidden"
+                    aria-controls="menu-collapse" aria-expanded="false" @click="handler">
+                    <span class="sr-only">Navigation Menu</span>
+                    <i class="mdi mdi-menu mdi-24px"></i>
+                </button>
+            </div>
 
-                <div class="navigation lg_992:order-1 lg_992:flex flex-grow justify-center" id="menu-collapse" :class="{hidden : !toggle}">
-                    <ul class="navbar-nav items-center" id="navbar-navlist" :class="{'en-mode': currentLang === 'en'}">
-                        <li class="nav-item active home dropdown-item" @mouseenter="showDropdown = true" @mouseleave="showDropdown = false">
-                            <a class="nav-link active" href="#home" @click="closeMobileMenu">{{ t('nav.home') }} <i class="mdi mdi-chevron-down"></i></a>
-                            <ul class="dropdown-menu hidden lg_992:block" :class="{ 'show': showDropdown }">
-                                <li><a @click.prevent="scrollToSection('about')" class="dropdown-link cursor-pointer">{{ t('nav.companyMenu.overview') }}</a></li>
-                                <li><a @click.prevent="scrollToSection('about-mission')" class="dropdown-link cursor-pointer">{{ t('nav.companyMenu.mission') }}</a></li>
-                                <li><a @click.prevent="scrollToSection('about-vision')" class="dropdown-link cursor-pointer">{{ t('nav.companyMenu.vision') }}</a></li>
-                                <li><a @click.prevent="scrollToSection('about-chairman')" class="dropdown-link cursor-pointer">{{ t('nav.companyMenu.chairmanWord') }}</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item about">
-                            <a class="nav-link" href="#about" @click="closeMobileMenu">{{ t('nav.about') }}</a>
-                        </li>
-                        <li class="nav-item features dropdown-item" @mouseenter="showServicesDropdown = true" @mouseleave="showServicesDropdown = false">
-                            <a class="nav-link" href="#features" @click="closeMobileMenu">{{ t('nav.services') }} <i class="mdi mdi-chevron-down"></i></a>
-                            <ul class="dropdown-menu hidden lg_992:block" :class="{ 'show': showServicesDropdown }">
-                                <li><a @click.prevent="openServiceDialog('electrical')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.electrical') }}</a></li>
-                                <li><a @click.prevent="openServiceDialog('mechanical')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.mechanical') }}</a></li>
-                                <li><a @click.prevent="openServiceDialog('building')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.building') }}</a></li>
-                                <li><a @click.prevent="openServiceDialog('infrastructure')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.infrastructure') }}</a></li>
-                                <li><a @click.prevent="openServiceDialog('mepDesign')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.mepDesign') }}</a></li>
-                                <li><a @click.prevent="openServiceDialog('bim')" class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.bim') }}</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item portfolio">
-                            <a class="nav-link" href="#portfolio" @click="closeMobileMenu">{{ t('nav.portfolio') }}</a>
-                        </li>
-                        <li class="nav-item clients">
-                            <a class="nav-link" href="#clients" @click="closeMobileMenu">{{ t('nav.review') }}</a>
-                        </li>
-                        <li class="nav-item blog">
-                            <a class="nav-link" href="#blog" @click="closeMobileMenu">{{ t('nav.blog') }}</a>
-                        </li>
-                        <!-- <li class="nav-item suppliers">
+            <div class="navigation lg_992:order-1 lg_992:flex flex-grow justify-center" id="menu-collapse"
+                :class="{ hidden: !toggle }">
+                <ul class="navbar-nav items-center" id="navbar-navlist" :class="{ 'en-mode': currentLang === 'en' }">
+                    <li class="nav-item active home dropdown-item" @mouseenter="showDropdown = true"
+                        @mouseleave="showDropdown = false">
+                        <a class="nav-link active" href="#home" @click="closeMobileMenu">{{ t('nav.home') }} <i
+                                class="mdi mdi-chevron-down"></i></a>
+                        <ul class="dropdown-menu hidden lg_992:block" :class="{ 'show': showDropdown }">
+                            <li><a @click.prevent="scrollToSection('about')" class="dropdown-link cursor-pointer">{{
+                                t('nav.companyMenu.overview') }}</a></li>
+                            <li><a @click.prevent="scrollToSection('about-mission')" class="dropdown-link cursor-pointer">{{
+                                t('nav.companyMenu.mission') }}</a></li>
+                            <li><a @click.prevent="scrollToSection('about-vision')" class="dropdown-link cursor-pointer">{{
+                                t('nav.companyMenu.vision') }}</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item about">
+                        <a class="nav-link" href="#about" @click="closeMobileMenu">{{ t('nav.about') }}</a>
+                    </li>
+                    <li class="nav-item features dropdown-item" @mouseenter="showServicesDropdown = true"
+                        @mouseleave="showServicesDropdown = false">
+                        <a class="nav-link" href="#features" @click="closeMobileMenu">{{ t('nav.services') }} <i
+                                class="mdi mdi-chevron-down"></i></a>
+                        <ul class="dropdown-menu hidden lg_992:block" :class="{ 'show': showServicesDropdown }">
+                            <li><a @click.prevent="openServiceDialog('electrical')" class="dropdown-link cursor-pointer">{{
+                                t('nav.servicesMenu.electrical') }}</a></li>
+                            <li><a @click.prevent="openServiceDialog('mechanical')" class="dropdown-link cursor-pointer">{{
+                                t('nav.servicesMenu.mechanical') }}</a></li>
+                            <li><a @click.prevent="openServiceDialog('building')" class="dropdown-link cursor-pointer">{{
+                                t('nav.servicesMenu.building') }}</a></li>
+                            <li><a @click.prevent="openServiceDialog('infrastructure')"
+                                    class="dropdown-link cursor-pointer">{{ t('nav.servicesMenu.infrastructure') }}</a></li>
+                            <li><a @click.prevent="openServiceDialog('mepDesign')" class="dropdown-link cursor-pointer">{{
+                                t('nav.servicesMenu.mepDesign') }}</a></li>
+                            <li><a @click.prevent="openServiceDialog('bim')" class="dropdown-link cursor-pointer">{{
+                                t('nav.servicesMenu.bim') }}</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item portfolio">
+                        <a class="nav-link" href="#portfolio" @click="closeMobileMenu">{{ t('nav.portfolio') }}</a>
+                    </li>
+                    <li class="nav-item clients">
+                        <a class="nav-link" href="#clients" @click="closeMobileMenu">{{ t('nav.review') }}</a>
+                    </li>
+                    <li class="nav-item blog">
+                        <a class="nav-link" href="#blog" @click="closeMobileMenu">{{ t('nav.blog') }}</a>
+                    </li>
+                    <!-- <li class="nav-item suppliers">
                             <a class="nav-link" href="#suppliers" @click="closeMobileMenu">{{ t('nav.suppliers') }}</a>
                         </li> -->
-                        <li class="nav-item contact">
-                            <a class="nav-link" href="#contact" @click="closeMobileMenu">{{ t('nav.contact') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="javascript:void(0)" @click.prevent="toggleLanguage(); closeMobileMenu()" class="nav-link cursor-pointer">
-                                {{ languageButtonText }}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                    <li class="nav-item contact">
+                        <a class="nav-link" href="#contact" @click="closeMobileMenu">{{ t('nav.contact') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" @click.prevent="toggleLanguage(); closeMobileMenu()"
+                            class="nav-link cursor-pointer">
+                            {{ languageButtonText }}
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <!-- Navbar End -->
+        </div>
+    </nav>
+    <!-- Navbar End -->
 </template>
 
 <script setup>
@@ -100,7 +123,7 @@ const languageButtonText = computed(() => {
 const scrollToSection = (sectionId) => {
     if (process.client) {
         showDropdown.value = false
-        
+
         setTimeout(() => {
             const element = document.getElementById(sectionId)
             if (element) {
@@ -116,7 +139,7 @@ const scrollToSection = (sectionId) => {
                 // Add highlight animation after scroll completes
                 setTimeout(() => {
                     element.classList.add('highlight-section')
-                    
+
                     // Remove after animation
                     setTimeout(() => {
                         element.classList.remove('highlight-section')
@@ -210,9 +233,9 @@ const onscroll = () => {
         display: block;
         width: 100%;
         text-align: center;
-        border-bottom: 1px solid rgba(0,0,0,0.05);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
-    
+
     .nav-item.active .nav-link {
         color: #064e3b !important;
         background-color: rgba(6, 78, 59, 0.05);
@@ -283,5 +306,4 @@ const onscroll = () => {
 .dark .dropdown-link:hover {
     background: #064e3b;
     color: white;
-}
-</style>
+}</style>
