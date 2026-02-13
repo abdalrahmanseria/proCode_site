@@ -83,7 +83,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import logoImg from '@/assets/images/new logo (2).png'
+import logoImg from '@/assets/images/new-logo-2.png'
 import authImg from '@/assets/images/bg/auth.jpg'
 
 const date = ref(new Date().getFullYear())

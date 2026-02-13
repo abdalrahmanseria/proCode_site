@@ -1,25 +1,12 @@
 <template>
- <navBar />
+    <navBar />
     <!-- Hero Start -->
-    <section class="py-28 w-full table relative bg-top bg-no-repeat hero-auth">
-           <div class="absolute inset-0 bg-slate-950/80"></div>
+    <section class="pt-6">
 
-            <div class="container">
-                <div class="grid grid-cols-1 pb-8 text-center mt-10">
-                    <h3 class="mb-3 text-3xl leading-normal font-medium text-white">{{ projectName }}</h3>
-
-                    <ul class="list-none">
-                        <li v-if="projectLocation" class="inline text-white/60 me-2"> 
-                            <span class="text-white">{{ t('portfolio.projectDetails.location') }} :</span> {{ projectLocation }}
-                        </li>
-                    </ul>
-                </div><!--end grid-->
-            </div><!--end container-->
-        </section><!--end section-->
-        <!-- Hero End -->
-        <portfoliodetail />
-        <fooTer />
-
+    </section>
+    <!-- Hero End -->
+    <portfoliodetail />
+    <fooTer />
 </template>
 
 <script>
@@ -40,11 +27,11 @@ export default {
     setup() {
         const route = useRoute()
         const { t, currentLang } = useLanguage()
-        
+
         const projectId = computed(() => {
             return route.query.id || 'mostakbal-masr'
         })
-        
+
         const projectName = computed(() => {
             const lang = currentLang.value
             if (projectId.value === 'mostakbal-masr') {
@@ -67,7 +54,7 @@ export default {
             }
             return ''
         })
-        
+
         const projectLocation = computed(() => {
             const lang = currentLang.value
             if (projectId.value === 'mostakbal-masr') {
@@ -90,7 +77,7 @@ export default {
             }
             return ''
         })
-        
+
         return {
             t,
             projectName,

@@ -9,18 +9,17 @@
                 <p class="text-slate-400 dark:text-slate-300 max-w-xl mx-auto">{{ t('portfolio.description') }}</p>
             </div><!--end grid-->
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 mt-8">
+            <div class="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-6 mt-8">
                 <div v-for="item in portfolios" :key="item.id"
                     class="relative rounded-md shadow-sm overflow-hidden group cursor-pointer"
                     @click="navigateToProject(item.id)">
                     <img :src="item.image" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500"
                         :alt="item.name">
-                    <div class="absolute inset-0 group-hover:bg-black opacity-50 transition duration-500 z-0"></div>
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition duration-500 z-0"></div>
 
                     <div class="absolute inset-0 flex items-center justify-center z-10">
-                        <div class="text-center px-4">
-                            <h5
-                                class="text-white text-xl font-semibold mb-2 opacity-0 group-hover:opacity-100 transition duration-500">
+                        <div class="text-center px-2">
+                            <h5 class="text-white text-sm md:text-xl font-semibold mb-2">
                                 {{ item.name }}
                             </h5>
                         </div>

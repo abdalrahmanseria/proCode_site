@@ -119,7 +119,9 @@ const translations = {
         'NutriFit - AI Personal Trainer',
         'My Clinic System - Healthcare Management',
         'Stripe & iOS Payment Integration modules',
-        'Customized LLM Analysis Tools'
+        'Customized LLM Analysis Tools',
+        'QVStyle - Fashion E-commerce Platform',
+        'Turathna - Retail & Inventory System'
       ],
       projectDetails: {
         projectDetail: 'Project Detail',
@@ -320,7 +322,9 @@ const translations = {
         'NutriFit - مدرب شخصي بالذكاء الاصطناعي',
         'My Clinic System - إدارة الرعاية الصحية',
         'وحدات تكامل Stripe و iOS للدفع',
-        'أدوات تحليل LLM مخصصة'
+        'أدوات تحليل LLM مخصصة',
+        'QVStyle - منصة تجارة إلكترونية للأزياء',
+        'Turathna - نظام إدارة التجزئة والمخزون'
       ],
       projectDetails: {
         projectDetail: 'تفاصيل المشروع',

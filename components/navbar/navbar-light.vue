@@ -2,14 +2,14 @@
     <nav class="navbar" id="navbar" @scroll="handleScroll">
         <div class="container-fluid px-4 md:px-10 flex lg_992:flex-nowrap flex-wrap items-center justify-between">
             <NuxtLink class="navbar-brand flex items-center flex-shrink-0" to="/">
-                <img :src="logoImg" class="h-[72px] md:h-[88px] dark:hidden logo-image" alt="ProCode Solutions">
-                <img :src="logoImg" class="h-[72px] md:h-[88px] hidden dark:inline-block logo-image"
+                <img :src="logoImg" class="h-10 sm:h-14 md:h-[88px] dark:hidden logo-image" alt="ProCode Solutions">
+                <img :src="logoImg" class="h-10 sm:h-14 md:h-[88px] hidden dark:inline-block logo-image"
                     alt="ProCode Solutions">
             </NuxtLink>
 
-            <div class="nav-icons flex items-center lg_992:order-2">
+            <div class="nav-icons flex items-center lg_992:order-2 ml-auto flex-shrink-0">
                 <!-- Navbar Button -->
-                <ul class="list-none menu-social mb-0 space-x-1">
+                <ul class="list-none menu-social mb-0 flex gap-1">
                     <li class="inline">
                         <a href="https://web.facebook.com/profile.php/?id=61579639703417&_rdc=1&_rdr#" target="_blank">
                             <span class="login-btn-primary"><span
@@ -122,7 +122,7 @@
 <script setup>
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
-import logoImg from '@/assets/images/new logo (2).png'
+import logoImg from '@/assets/images/new-logo-2.png'
 
 const { t, currentLang, isRTL, toggleLanguage } = useLanguage()
 const toggle = ref(false)
@@ -235,7 +235,7 @@ const onscroll = () => {
 <style lang="scss" scoped>
 .navbar-nav {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .nav-item {

@@ -104,7 +104,7 @@
 <script setup>
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useLanguage } from '~/composables/useLanguage'
-import logoImg from '@/assets/images/new logo (2).png'
+import logoImg from '@/assets/images/new-logo-2.png'
 
 const { t, currentLang, isRTL, toggleLanguage } = useLanguage()
 const toggle = ref(false)

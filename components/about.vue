@@ -1,6 +1,6 @@
 <template>
     <!-- Start -->
-    <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800" id="about">
+    <section class="relative md:py-24 py-8 bg-gray-50 dark:bg-slate-800" id="about">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
                 <div class="lg:col-span-5">

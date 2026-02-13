@@ -14,10 +14,10 @@
                         <a v-if="client.link" :href="client.link" target="_blank"
                             class="w-full h-full flex items-center justify-center">
                             <img :src="client.image" :alt="client.name"
-                                class="max-w-full h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                                class="max-w-full h-20 object-contain grayscale-0 md:grayscale md:hover:grayscale-0 transition-all duration-300 opacity-100 md:opacity-70 md:hover:opacity-100">
                         </a>
                         <img v-else :src="client.image" :alt="client.name"
-                            class="max-w-full h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                            class="max-w-full h-20 object-contain grayscale-0 md:grayscale md:hover:grayscale-0 transition-all duration-300 opacity-100 md:opacity-70 md:hover:opacity-100">
                     </div>
                 </div>
             </div><!--end container-->
@@ -29,6 +29,7 @@
 import alkyanSolarImg from '@/assets/images/clients/Screenshot 2026-02-12 133342.png'
 import turathunasImg from '@/assets/images/clients/logo.svg'
 import qvImg from '@/assets/images/clients/qvlogo.svg'
+import wizTechImg from '@/assets/images/clients/Screenshot 2026-02-13 144930.png'
 // import client1 from '@/assets/images/clients/Screenshot 2025-12-10 145421.png'
 // import client2 from '@/assets/images/clients/Screenshot 2025-12-10 145425.png'
 // import client3 from '@/assets/images/clients/Screenshot 2025-12-10 145431.png'
@@ -53,6 +54,11 @@ const clients = [
         image: qvImg,
         name: 'QV',
         link: 'https://38.242.253.237.sslip.io/QV/'
+    },
+    {
+        image: wizTechImg,
+        name: 'Wiz Tech',
+        link: 'https://www.wiz-tech.net/'
     },
     // {
     //     image: client1,

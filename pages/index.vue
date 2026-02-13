@@ -2,9 +2,9 @@
   <navBar @openServiceDialog="handleServiceDialog" />
   <!-- Hero Start -->
 
-  <section class="py-36 lg:py-64 w-full table relative bg-center bg-cover hero-section" id="home">
+  <section class="py-12 md:py-36 lg:py-64 w-full table relative bg-center bg-cover hero-section" id="home">
     <!-- Background Slider -->
-    <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden" dir="ltr">
       <div class="slider-container" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
         <div v-for="(image, index) in backgroundImages" :key="index" class="slider-slide"
           :style="{ backgroundImage: `url(${image})` }"></div>
@@ -12,8 +12,9 @@
     </div>
     <div class="absolute inset-0 bg-black opacity-70"></div>
     <div class="container relative">
-      <div class="grid grid-cols-1 mt-12">
-        <h4 class="text-white lg:text-5xl text-4xl lg:leading-normal leading-normal font-medium mb-7 position-relative">
+      <div class="grid grid-cols-1 mt-10 md:mt-12">
+        <h4
+          class="text-white lg:text-5xl text-2xl md:text-4xl lg:leading-normal leading-normal font-medium mb-7 position-relative">
           {{ t('hero.title') }} <br>{{ t('hero.subtitle') }}
           <br class="md:hidden">
           <span class="inline-block min-w-[200px] typewriter-wrapper">
