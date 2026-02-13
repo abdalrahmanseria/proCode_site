@@ -1,9 +1,9 @@
 <template>
     <nav class="navbar" id="navbar" @scroll="handleScroll">
-        <div class="container-fluid px-4 md:px-10 flex lg_992:flex-nowrap flex-wrap items-center justify-between">
+        <div class="container-fluid px-2 md:px-10 flex lg_992:flex-nowrap flex-wrap items-center justify-between">
             <NuxtLink class="navbar-brand flex items-center flex-shrink-0" to="/">
-                <img :src="logoImg" class="h-10 sm:h-14 md:h-[88px] dark:hidden logo-image" alt="ProCode Solutions">
-                <img :src="logoImg" class="h-10 sm:h-14 md:h-[88px] hidden dark:inline-block logo-image"
+                <img :src="logoImg" class="h-7 sm:h-14 md:h-[88px] dark:hidden logo-image" alt="ProCode Solutions">
+                <img :src="logoImg" class="h-7 sm:h-14 md:h-[88px] hidden dark:inline-block logo-image"
                     alt="ProCode Solutions">
             </NuxtLink>
 
