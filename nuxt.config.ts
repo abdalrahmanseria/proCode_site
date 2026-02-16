@@ -26,9 +26,9 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#4A90E2' },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-        { rel: 'apple-touch-icon', href: '/favicon.png' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v=2' },  
+        { rel: 'icon', type: 'image/png', href: '/favicon.png?v=2' },
+        { rel: 'apple-touch-icon', href: '/favicon.png?v=2' },
         {
           // rel: 'stylesheet',
           // href: 'https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css',
